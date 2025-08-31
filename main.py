@@ -18,6 +18,12 @@ initialize_firebase("firebase_credentials.json")
 
 # --- Constants ---
 MAX_QUESTIONS = 10
+QUESTION_TIME_LIMIT = 60
+
+EXCLUDED_TERMS = [
+    "turtle graphics", "turtle", "turtle module",
+    "turtle.forward", "turtle.backward", "turtle.left", "turtle.right"
+]
 
 # --- Load Environment ---
 load_dotenv()
@@ -44,7 +50,12 @@ def start_quiz(topic, save_to_db, topic_contexts, load_random=False):
         st.session_state.questions = get_random_quiz_questions(10)
         st.session_state.max_questions_override = len(st.session_state.questions)
     else:
-        q = get_quiz_from_topic(topic, api_key, topic_contexts.get(topic, []))
+        q = get_quiz_from_topic(
+            topic,
+            api_key,
+            topic_contexts.get(topic, []),
+            exclude_terms=EXCLUDED_TERMS
+        )
         if q:
             st.session_state.questions.append(q)
             if save_to_db and not is_duplicate_question(q):
@@ -85,7 +96,7 @@ def display_question(topic, save_to_db, topic_contexts):
         st.session_state.last_rendered_question = i
 
     elapsed = int(time.time() - st.session_state.question_start_time)
-    remaining = 30 - elapsed
+    remaining = QUESTION_TIME_LIMIT - elapsed
 
     if remaining <= 0 and not st.session_state.timer_expired:
         st.session_state.timer_expired = True
@@ -101,7 +112,8 @@ def display_question(topic, save_to_db, topic_contexts):
 
     if remaining > 0:
         st.markdown(f"⏳ **Time left: {remaining} seconds**")
-        st.progress((30 - remaining) / 30)
+        progress = 1 - max(remaining, 0) / QUESTION_TIME_LIMIT  # same as (LIMIT - remaining)/LIMIT
+        st.progress(min(max(progress, 0.0), 1.0))
 
     st.markdown(f"**QUESTION {i + 1}.**")
     if "```" in q["question"]:
@@ -182,7 +194,12 @@ def next_question(topic, save_to_db, topic_contexts):
     st.session_state.last_rendered_question = -1
 
     if st.session_state.current_question >= len(st.session_state.questions):
-        q_next = get_quiz_from_topic(topic, api_key, topic_contexts.get(topic, []))
+        q_next = get_quiz_from_topic(
+            topic,
+            api_key,
+            topic_contexts.get(topic, []),
+            exclude_terms=EXCLUDED_TERMS
+        )
         if q_next:
             st.session_state.questions.append(q_next)
             if save_to_db and not is_duplicate_question(q_next):
@@ -278,8 +295,11 @@ topic_contexts = load_topic_contexts(topics)
 with st.sidebar.expander("Please select a topic", expanded=True):
     topic = st.radio("Topic", topics, index=0, label_visibility="collapsed")
 
-# 👉 Mounting the PDF chat widget in the sidebar
-render_pdf_chat()  # appears under the topic picker
+# Make the radio THE single source of truth
+st.session_state.selected_topic = topic
+
+# 👉 Mount PDF chat using the same topic (remove the second menu from the chat UI)
+render_pdf_chat(selected_topic=topic)  # pass it down
 
 save_to_db = True
 st.sidebar.checkbox("📂 Save questions to DB", value=True)

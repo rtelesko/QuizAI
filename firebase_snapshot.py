@@ -1,3 +1,4 @@
+
 # firebase_backend.py — snapshot-only runtime (no Firestore I/O)
 import json
 import os
