@@ -18,7 +18,6 @@ initialize_firebase("firebase_credentials.json")
 
 # --- Constants ---
 MAX_QUESTIONS = 10
-QUESTION_TIME_LIMIT = 60
 
 EXCLUDED_TERMS = [
     "turtle graphics", "turtle", "turtle module",
@@ -42,7 +41,6 @@ def start_quiz(topic, save_to_db, topic_contexts, load_random=False):
     st.session_state.wrong_answers = 0
     st.session_state.quiz_complete = False
     st.session_state.quiz_data = []
-    st.session_state.show_timer_expired_warning = False
     # Clear any previous PDF bytes
     st.session_state.pdf_bytes = None
 
@@ -63,9 +61,12 @@ def start_quiz(topic, save_to_db, topic_contexts, load_random=False):
         else:
             st.error("Failed to load a quiz question. Please try again.")
 
+    # Always reset the timer state after starting a new quiz
+    st.session_state.last_rendered_question = -1
+
 
 def display_question(topic, save_to_db, topic_contexts):
-    """Displays the current question, options, and timer."""
+    """Displays the current question and options."""
     if not st.session_state.questions:
         st.markdown("""
         <div style='
@@ -80,7 +81,6 @@ def display_question(topic, save_to_db, topic_contexts):
             <div style='font-size: 16px;'>🤔 Please start a new quiz or load existing questions from the sidebar.</div>
         </div>
         """, unsafe_allow_html=True)
-
         return
 
     i = st.session_state.current_question
@@ -89,31 +89,6 @@ def display_question(topic, save_to_db, topic_contexts):
     if not isinstance(q, dict):
         st.error("There was a problem loading this question.")
         return
-
-    if "last_rendered_question" not in st.session_state or st.session_state.last_rendered_question != i:
-        st.session_state.question_start_time = time.time()
-        st.session_state.timer_expired = False
-        st.session_state.last_rendered_question = i
-
-    elapsed = int(time.time() - st.session_state.question_start_time)
-    remaining = QUESTION_TIME_LIMIT - elapsed
-
-    if remaining <= 0 and not st.session_state.timer_expired:
-        st.session_state.timer_expired = True
-        st.session_state.show_timer_expired_warning = True
-        st.rerun()
-
-    if st.session_state.show_timer_expired_warning:
-        st.warning("⏰ Time's up! Moving to next question...")
-        time.sleep(1.5)
-        next_question(topic, save_to_db, topic_contexts)
-        st.session_state.show_timer_expired_warning = False
-        st.rerun()
-
-    if remaining > 0:
-        st.markdown(f"⏳ **Time left: {remaining} seconds**")
-        progress = 1 - max(remaining, 0) / QUESTION_TIME_LIMIT  # same as (LIMIT - remaining)/LIMIT
-        st.progress(min(max(progress, 0.0), 1.0))
 
     st.markdown(f"**QUESTION {i + 1}.**")
     if "```" in q["question"]:
@@ -144,8 +119,8 @@ def display_question(topic, save_to_db, topic_contexts):
                  format_func=lambda x: get_label(x, options_to_display.index(x)),
                  key=f"answered_{i}", disabled=True)
     else:
-        user_answer = st.radio("Your answer:", options_to_display, key=i, disabled=st.session_state.timer_expired)
-        if st.button("Submit", disabled=st.session_state.timer_expired):
+        user_answer = st.radio("Your answer:", options_to_display, key=i)
+        if st.button("Submit"):
             st.session_state.answers[i] = options_to_display.index(user_answer)
             st.rerun()
 
@@ -163,10 +138,6 @@ def display_question(topic, save_to_db, topic_contexts):
                 st.code(q["explanation"], language="python")
             else:
                 st.write(q["explanation"])
-
-    if remaining > 0 and not already_answered and not st.session_state.timer_expired:
-        time.sleep(1)
-        st.rerun()
 
 
 def next_question(topic, save_to_db, topic_contexts):
@@ -189,8 +160,6 @@ def next_question(topic, save_to_db, topic_contexts):
         return
 
     st.session_state.current_question += 1
-    st.session_state.question_start_time = time.time()
-    st.session_state.timer_expired = False
     st.session_state.last_rendered_question = -1
 
     if st.session_state.current_question >= len(st.session_state.questions):
@@ -253,10 +222,8 @@ def show_summary(topic, save_to_db, topic_contexts):
 def init_state():
     defaults = {
         "questions": [], "answers": {}, "current_question": 0, "right_answers": 0,
-        "wrong_answers": 0, "quiz_complete": False, "show_timer_expired_warning": False,
-        "question_start_time": time.time(), "timer_expired": False,
-        "max_questions_override": MAX_QUESTIONS, "quiz_data": [],
-        "app_closed": False
+        "wrong_answers": 0, "quiz_complete": False, "max_questions_override": MAX_QUESTIONS,
+        "quiz_data": [], "app_closed": False
     }
     for key, default in defaults.items():
         if key not in st.session_state:
@@ -266,6 +233,21 @@ def init_state():
 init_state()
 
 # --- App Layout & Logic ---
+
+# --- App Layout & Logic ---
+
+# Global CSS to wrap code instead of horizontal scrolling
+st.markdown(
+    """
+    <style>
+    pre code {
+        white-space: pre-wrap !important;  /* Wrap long lines */
+        word-break: break-word !important; /* Break long words if needed */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
 # Title
 st.image("https://www.python.org/static/community_logos/python-logo-master-v3-TM.png", width=200)
@@ -301,8 +283,7 @@ st.session_state.selected_topic = topic
 # 👉 Mount PDF chat using the same topic (remove the second menu from the chat UI)
 render_pdf_chat(selected_topic=topic)  # pass it down
 
-save_to_db = True
-st.sidebar.checkbox("📂 Save questions to DB", value=True)
+save_to_db = st.sidebar.checkbox("📂 Save questions to DB", value=True)
 # disabled because of synch problems when deployed
 
 st.sidebar.info(f"📦 Total number of quiz questions in DB: {get_quiz_question_count()}")
@@ -336,9 +317,10 @@ if st.session_state.questions and not st.session_state.quiz_complete:
 
 with col_next:
     if st.session_state.questions and not st.session_state.quiz_complete:
+        # Pass the arguments to the function
         if st.button("Next"):
             next_question(topic, save_to_db, topic_contexts)
-            st.rerun()
+            st.rerun()  # Rerun after updating the state
 
 with col_main:
     if st.session_state.quiz_complete:
