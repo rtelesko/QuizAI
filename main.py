@@ -1,5 +1,4 @@
 import os
-import time
 
 import streamlit as st
 from dotenv import load_dotenv
@@ -7,7 +6,7 @@ from dotenv import load_dotenv
 from chat_with_PDF import render_pdf_chat
 from create_context_from_PDF import load_topic_contexts
 from export_quiz_to_PDF import generate_quiz_pdf
-from firebase_backend import (
+from firebase_snapshot import (
     initialize_firebase, save_quiz_question, get_random_quiz_questions,
     get_quiz_question_count, is_duplicate_question
 )
@@ -283,7 +282,7 @@ st.session_state.selected_topic = topic
 # 👉 Mount PDF chat using the same topic (remove the second menu from the chat UI)
 render_pdf_chat(selected_topic=topic)  # pass it down
 
-save_to_db = st.sidebar.checkbox("📂 Save questions to DB", value=True)
+save_to_db = st.sidebar.checkbox("📂 Save questions to DB", value=False, disabled=True)
 # disabled because of synch problems when deployed
 
 st.sidebar.info(f"📦 Total number of quiz questions in DB: {get_quiz_question_count()}")
