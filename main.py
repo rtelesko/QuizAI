@@ -1,4 +1,6 @@
 import os
+import tempfile
+import json
 
 import streamlit as st
 from dotenv import load_dotenv
@@ -6,14 +8,16 @@ from dotenv import load_dotenv
 from chat_with_PDF import render_pdf_chat
 from create_context_from_PDF import load_topic_contexts
 from export_quiz_to_PDF import generate_quiz_pdf
-from firebase_snapshot import (
+# Use live Firebase backend
+from firebase_backend import (
     initialize_firebase, save_quiz_question, get_random_quiz_questions,
     get_quiz_question_count, is_duplicate_question
 )
 from get_quiz import get_quiz_from_topic
+from export_db_to_Moodle import export_db_to_Moodle
 
 # --- Initialize Firebase ---
-initialize_firebase("firebase_credentials.json")
+initialize_firebase(_resolve_firebase_credentials_path())
 
 # --- Constants ---
 MAX_QUESTIONS = 10
@@ -27,9 +31,27 @@ EXCLUDED_TERMS = [
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 
+# --- Export helpers ---
+def _resolve_firebase_credentials_path() -> str:
+    """
+    On Streamlit Cloud, prefer credentials from st.secrets["firebase_credentials"].
+    Locally, fall back to the existing 'firebase_credentials.json' file.
+    """
+    try:
+        creds = st.secrets.get("firebase_credentials")
+    except Exception:
+        creds = None
+
+    if creds:
+        tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".json")
+        tmp.write(json.dumps(dict(creds)).encode("utf-8"))
+        tmp.flush()
+        return tmp.name
+
+    return "firebase_credentials.json"
+
 
 # --- FUNCTION DEFINITIONS ---
-
 def start_quiz(topic, save_to_db, topic_contexts, load_random=False):
     """Resets the quiz state and loads the first question(s)."""
     # Reset all relevant session state variables
@@ -44,6 +66,7 @@ def start_quiz(topic, save_to_db, topic_contexts, load_random=False):
     st.session_state.pdf_bytes = None
 
     if load_random:
+        # Pull questions from Firestore (firebase_backend)
         st.session_state.questions = get_random_quiz_questions(10)
         st.session_state.max_questions_override = len(st.session_state.questions)
     else:
@@ -233,8 +256,6 @@ init_state()
 
 # --- App Layout & Logic ---
 
-# --- App Layout & Logic ---
-
 # Global CSS to wrap code instead of horizontal scrolling
 st.markdown(
     """
@@ -272,43 +293,75 @@ topics = [
 ]
 topic_contexts = load_topic_contexts(topics)
 
-# Sidebar
+# Sidebar (upper part)
 with st.sidebar.expander("Please select a topic", expanded=True):
     topic = st.radio("Topic", topics, index=0, label_visibility="collapsed")
 
 # Make the radio THE single source of truth
 st.session_state.selected_topic = topic
 
-# 👉 Mount PDF chat using the same topic (remove the second menu from the chat UI)
-render_pdf_chat(selected_topic=topic)  # pass it down
+# Mount PDF chat using the same topic
+render_pdf_chat(selected_topic=topic)
 
-save_to_db = st.sidebar.checkbox("📂 Save questions to DB", value=False, disabled=True)
-# disabled because of synch problems when deployed
-
+# Save toggle + DB info (upper part)
+save_to_db = st.sidebar.checkbox("📂 Save questions to DB", value=False)
 st.sidebar.info(f"📦 Total number of quiz questions in DB: {get_quiz_question_count()}")
 
+# Compute quiz state
 quiz_in_progress = bool(st.session_state.questions and not st.session_state.quiz_complete)
-
-# NEW: expose the flag for other modules (like chat_with_PDF)
 st.session_state.quiz_in_progress = quiz_in_progress
 
+# --- Separator between upper part and functions ---
+st.sidebar.markdown("---")
+
+# --- One section for all actions ---
+st.sidebar.subheader("🧰 Functions")
+
+# Start quiz
 if st.sidebar.button("🚀 Start Quiz", disabled=quiz_in_progress):
-    start_quiz(topic, save_to_db, topic_contexts)
+    start_quiz(topic, save_to_db, load_topic_contexts(topics))
     st.rerun()
 
-# Make the button text reflect snapshot instead of DB
-if st.sidebar.button("🎲 Load 10 Random Questions (from snapshot)", disabled=quiz_in_progress):
-    start_quiz(topic, save_to_db, topic_contexts, load_random=True)
+# Load random questions (from Firebase)
+if st.sidebar.button("🎲 Load 10 Random Questions (from Firebase)", disabled=quiz_in_progress):
+    start_quiz(topic, save_to_db, load_topic_contexts(topics), load_random=True)
     st.rerun()
 
-# Allow closing only when NO quiz is in progress (i.e., before start or after completion)
+# Export Moodle XML
+if st.sidebar.button("💾 Export Moodle XML"):
+    cred_path = _resolve_firebase_credentials_path()
+    out_path = os.path.join(tempfile.gettempdir(), "moodle_questions.xml")
+    try:
+        count = export_db_to_Moodle(
+            credential_path=cred_path,
+            output_path=out_path,
+            collection="quiz_questions",
+            category="Python Quiz",
+            shuffleanswers=True
+        )
+        with open(out_path, "rb") as f:
+            st.session_state.moodle_xml_bytes = f.read()
+        st.session_state.moodle_xml_filename = "moodle_questions.xml"
+        st.sidebar.success(f"Exported {count} questions. Use the download button below.")
+    except Exception as e:
+        st.sidebar.error(f"Export failed: {e}")
+
+if "moodle_xml_bytes" in st.session_state:
+    st.sidebar.download_button(
+        "⬇️ Download Moodle XML",
+        data=st.session_state.moodle_xml_bytes,
+        file_name=st.session_state.get("moodle_xml_filename", "moodle_questions.xml"),
+        mime="application/xml",
+        use_container_width=True,
+    )
+
+# Close app (disabled while a quiz is in progress)
 close_disabled = quiz_in_progress or st.session_state.app_closed
-
 if st.sidebar.button("❌ Close App", disabled=close_disabled):
     st.session_state.app_closed = True
     st.rerun()
 
-# Main content
+# --- Main content ---
 col_main, col_next = st.columns([8, 1])
 
 if st.session_state.questions and not st.session_state.quiz_complete:
@@ -316,16 +369,15 @@ if st.session_state.questions and not st.session_state.quiz_complete:
 
 with col_next:
     if st.session_state.questions and not st.session_state.quiz_complete:
-        # Pass the arguments to the function
         if st.button("Next"):
-            next_question(topic, save_to_db, topic_contexts)
-            st.rerun()  # Rerun after updating the state
+            next_question(topic, save_to_db, load_topic_contexts(topics))
+            st.rerun()
 
 with col_main:
     if st.session_state.quiz_complete:
-        show_summary(topic, save_to_db, topic_contexts)
+        show_summary(topic, save_to_db, load_topic_contexts(topics))
     else:
-        display_question(topic, save_to_db, topic_contexts)
+        display_question(topic, save_to_db, load_topic_contexts(topics))
         if st.session_state.questions:
             st.write(f"Right answers: {st.session_state.right_answers}")
             st.write(f"Wrong answers: {st.session_state.wrong_answers}")
