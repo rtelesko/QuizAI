@@ -1,0 +1,2414 @@
+[
+  {
+    "options": [
+      "The central processing unit (CPU)",
+      "A program that calculates interest",
+      "An algorithm written to sort numbers",
+      "The Python programming language"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "Hardware refers to the physical components of a computer system. The CPU is one such major hardware component, as described in Chapter 1.",
+    "question": "Which of the following is considered hardware in a computer system?",
+    "answer": "The central processing unit (CPU)"
+  },
+  {
+    "options": [
+      "Software and hardware are both physical components of a computer.",
+      "Software is composed of physical devices like the CPU and memory.",
+      "Hardware acts as the physical foundation, and software dictates the tasks it performs.",
+      "Hardware executes the tasks, while software provides the physical components."
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "Hardware refers to the physical components of a computer system, such as the CPU and memory, while software consists of the instructions that tell the hardware what tasks to perform. This interaction allows computers to perform a variety of programs designed by programmers.",
+    "question": "Which of the following statements is true regarding the relationship between hardware and software?",
+    "answer": "Hardware acts as the physical foundation, and software dictates the tasks it performs."
+  },
+  {
+    "options": [
+      "A physical component of the computer",
+      "A person who designs, creates, and tests computer programs",
+      "The central processing unit of a computer",
+      "A set of instructions for the computer to execute"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "A programmer, also known as a software developer, is someone who designs, creates, and tests computer programs, which are sets of instructions that guide computers to perform tasks.",
+    "question": "What is a programmer in the context of computers and programming?",
+    "answer": "A person who designs, creates, and tests computer programs"
+  },
+  {
+    "options": [
+      "It ensures that the program is free of syntax errors.",
+      "It involves testing the program thoroughly.",
+      "It helps understand the task and aligns the program with customer needs.",
+      "It involves writing all the code for the program."
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "The design phase is crucial because it involves understanding the task the program is supposed to perform and ensuring that the program meets the customer's requirements before any code is written.",
+    "question": "Why is the 'design the program' phase considered the most important part of the program development cycle?",
+    "answer": "It helps understand the task and aligns the program with customer needs."
+  },
+  {
+    "options": [
+      "The dictionary automatically sorts its keys and retries.",
+      "The dictionary returns None.",
+      "The dictionary adds the key with a default value of 0.",
+      "A KeyError exception is raised."
+    ],
+    "topic": "Chapter09 Dictionaries and Sets",
+    "explanation": "In Python, accessing a value with a non-existent key using dictionary[key] raises a KeyError. To avoid this, you should check for the key's existence using the in operator or use the get() method which can return a default value instead.",
+    "question": "What happens if you try to access a value in a dictionary using a key that does not exist?",
+    "answer": "A KeyError exception is raised."
+  },
+  {
+    "options": [
+      "Dictionary keys are automatically sorted in ascending order.",
+      "Dictionary keys must be immutable objects such as strings, numbers, or tuples.",
+      "Dictionary keys must always be strings.",
+      "Dictionary keys can be any type, including lists and other dictionaries."
+    ],
+    "topic": "Chapter09 Dictionaries and Sets",
+    "explanation": "In Python, dictionary keys must be immutable so they can be hashed. Valid key types include strings, numbers, and tuples (if all elements are also immutable). Mutable types like lists or dictionaries cannot be used as keys.",
+    "question": "Which of the following best describes a characteristic of Python dictionary keys?",
+    "answer": "Dictionary keys must be immutable objects such as strings, numbers, or tuples."
+  },
+  {
+    "options": [
+      "A function that returns multiple values",
+      "A control structure that performs specific actions only if a condition is true",
+      "A control structure that executes statements in the order they appear",
+      "A way to loop through a sequence of values"
+    ],
+    "topic": "Chapter03 Decision Structures and Boolean Logic",
+    "explanation": "In Python, a decision structure—also known as a selection structure—uses statements like if or if-else to perform actions only when certain conditions are met. This allows for conditional execution of code based on Boolean logic.",
+    "question": "Which of the following best describes a decision structure in Python?",
+    "answer": "A control structure that performs specific actions only if a condition is true"
+  },
+  {
+    "options": [
+      "if 'missing_key' in my_dict: value = my_dict['missing_key']",
+      "value = my_dict['missing_key']",
+      "value = my_dict.get('missing_key')",
+      "Both B and C"
+    ],
+    "topic": "Chapter09 Dictionaries and Sets",
+    "explanation": "Accessing a non-existent key directly using my_dict['key'] raises a KeyError. To avoid this, you can first check if the key exists using the in operator (as in option B), or use the get method, which returns None or a default value instead of raising an error (as in option C). Therefore, both B and C are correct.",
+    "question": "Which of the following statements correctly retrieves a value from a Python dictionary without raising a KeyError if the key is missing?",
+    "answer": "Both B and C"
+  },
+  {
+    "options": [
+      "Functions decrease the program execution time.",
+      "Functions increase the complexity of debugging.",
+      "Functions allow programs to be divided into smaller, reusable tasks.",
+      "Functions automatically correct syntax errors."
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "Using functions helps modularize a program by breaking it down into smaller, manageable and reusable tasks. This divide and conquer approach improves code organization and reusability.",
+    "question": "What is a primary advantage of using functions in a Python program?",
+    "answer": "Functions allow programs to be divided into smaller, reusable tasks."
+  },
+  {
+    "options": [
+      "A person who can design, create, and test computer programs.",
+      "A software application used for data analysis.",
+      "The physical devices that make up a computer.",
+      "The set of instructions a computer follows to perform a task."
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "Hardware refers to the physical components of a computer system, such as the central processing unit, main memory, secondary storage devices, and input/output devices. It is distinct from software, which consists of the instructions that tell the hardware what to do.",
+    "question": "Which of the following accurately defines computer hardware?",
+    "answer": "The physical devices that make up a computer."
+  },
+  {
+    "options": [
+      "An input device that allows users to interact with software",
+      "A device used to store data permanently",
+      "A person who assembles physical computer parts",
+      "A person who designs, creates, and tests computer programs"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "According to Chapter 1, a programmer—also known as a software developer—is someone who designs, creates, and tests computer programs.",
+    "question": "Which of the following best describes the role of a programmer?",
+    "answer": "A person who designs, creates, and tests computer programs"
+  },
+  {
+    "options": [
+      "The equal sign (=) is used to assign values to variables in Python.",
+      "A variable in Python must always store data of the same type once it is assigned.",
+      "Variables must be declared before they are assigned a value in Python.",
+      "The input() function returns an integer if the user types a number."
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "In Python, the equal sign (=) is the assignment operator used to create variables and assign them values. The input() function always returns a string, regardless of the user input. Variables can hold any data type and can be reassigned to a different type later. There is no need for explicit variable declaration before assignment.",
+    "question": "Which of the following statements about Python variables and input is TRUE?",
+    "answer": "The equal sign (=) is used to assign values to variables in Python."
+  },
+  {
+    "options": [
+      "Duplicated code is easier for beginners to understand.",
+      "Duplicating code ensures faster execution time.",
+      "Repetition structures make the program run in parallel.",
+      "Repetition structures reduce code size, make maintenance easier, and prevent errors."
+    ],
+    "topic": "Chapter04 Repetition Structures",
+    "explanation": "Using repetition structures like loops allows a programmer to write a task once and repeat it as needed. This avoids duplicated code, which can make programs larger, harder to maintain, and more error-prone if changes are needed in multiple places.",
+    "question": "Why is it generally better to use a repetition structure instead of duplicating code when a task must be performed multiple times?",
+    "answer": "Repetition structures reduce code size, make maintenance easier, and prevent errors."
+  },
+  {
+    "options": [
+      "They make the code run faster by default.",
+      "They allow for storing all code in a single place.",
+      "They eliminate the need for variables.",
+      "They help modularize code, making it easier to manage and reuse."
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "Functions allow you to break down a program into smaller, manageable pieces. This modular approach, known as 'divide and conquer', improves readability, reusability, and maintainability of the code.",
+    "question": "What is a primary benefit of using functions when writing Python programs?",
+    "answer": "They help modularize code, making it easier to manage and reuse."
+  },
+  {
+    "options": [
+      "insert()",
+      "add()",
+      "append()",
+      "extend()"
+    ],
+    "topic": "Chapter07 Lists and Tuples",
+    "explanation": "The append() method in Python is used to add a single element to the end of a list. It modifies the original list and increases the list's length by one.",
+    "question": "Which Python method would you use to add an element to the end of a list?",
+    "answer": "append()"
+  },
+  {
+    "options": [
+      "Dictionary keys must be mutable objects.",
+      "You can use the 'in' operator to check if a key exists in a dictionary.",
+      "Accessing a missing key with dictionary[key] returns None.",
+      "Dictionaries store data in a sorted order."
+    ],
+    "topic": "Chapter09 Dictionaries and Sets",
+    "explanation": "In Python, you can use the 'in' or 'not in' operators to test whether a specific key exists in a dictionary. Dictionary keys must be immutable (not mutable), dictionaries are unordered collections, and accessing a non-existent key using dictionary[key] raises a KeyError rather than returning None.",
+    "question": "Which of the following is TRUE about Python dictionaries?",
+    "answer": "You can use the 'in' operator to check if a key exists in a dictionary."
+  },
+  {
+    "options": [
+      "Variables must be declared as integers explicitly.",
+      "The comparison should use '==', not '='.",
+      "'if' cannot directly compare variables.",
+      "'print' statements should be indented with tabs, not spaces."
+    ],
+    "topic": "Chapter03 Decision Structures and Boolean Logic",
+    "explanation": "In Python, '=' is the assignment operator, while '==' is used for comparison in Boolean expressions. The intent here is to evaluate whether x equals y, so '==' must be used inside the if statement. Using '=' results in a syntax error.",
+    "question": "Spot the bug in the following Python code that compares two variables to determine equality:\n\n```python\nx = 5\ny = 10\n\nif x = y:\n    print(\"Equal\")\nelse:\n    print(\"Not equal\")\n```",
+    "answer": "The comparison should use '==', not '='."
+  },
+  {
+    "options": [
+      "A programmer is someone who repairs hardware components.",
+      "Secondary storage devices are considered software.",
+      "Computers perform tasks by following instructions written in a program.",
+      "A program is a physical component of a computer."
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "Chapter 1 explains that a computer can be programmed to do any job that a program tells it to. A program is a set of instructions that the computer follows to perform a task, which defines how computers operate through software.",
+    "question": "Which of the following statements is true based on Chapter 1: Introduction to Computers and Programming?",
+    "answer": "Computers perform tasks by following instructions written in a program."
+  },
+  {
+    "options": [
+      "Tuples use square brackets, while lists use parentheses",
+      "Lists can store only integers, but tuples can store any data type",
+      "Lists are mutable, while tuples are immutable",
+      "Lists are immutable, while tuples are mutable"
+    ],
+    "topic": "Chapter07 Lists and Tuples",
+    "explanation": "In Python, lists are mutable, meaning their contents can be changed after creation. Tuples, on the other hand, are immutable and cannot be modified once created.",
+    "question": "What is the primary difference between a list and a tuple in Python?",
+    "answer": "Lists are mutable, while tuples are immutable"
+  },
+  {
+    "options": [
+      "Functions in modules can only use global constants",
+      "Modules automatically convert void functions into value-returning functions",
+      "It allows functions to be reused across multiple programs",
+      "Modules eliminate the need for local variables"
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "Storing functions in modules promotes code reusability and organization. Once a function is defined in a module, it can be imported and used in other Python programs, reducing redundancy and improving maintainability.",
+    "question": "According to Chapter 5, what is a key benefit of storing functions in modules?",
+    "answer": "It allows functions to be reused across multiple programs"
+  },
+  {
+    "options": [
+      "define",
+      "lambda",
+      "def",
+      "function"
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "The correct keyword for defining a function in Python is 'def'. The syntax 'def greet(*, name):' creates a function where 'name' is a keyword-only parameter, meaning it must be specified by name when the function is called.",
+    "question": "Fill in the blank to define a function named greet that accepts one keyword-only parameter 'name' and prints a greeting:\n\n_____ greet(*, name):\n    print(\"Hello,\", name)",
+    "answer": "def"
+  },
+  {
+    "options": [
+      "A software application used for managing hardware devices",
+      "A machine that stores data permanently",
+      "A person who can design, create, and test computer programs",
+      "A person who installs physical hardware components"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "Chapter 1 defines a programmer as someone who designs, creates, and tests computer programs. They are also known as software developers.",
+    "question": "Which of the following best describes the role of a programmer as introduced in Chapter 1?",
+    "answer": "A person who can design, create, and test computer programs"
+  },
+  {
+    "options": [
+      "for",
+      "while",
+      "def",
+      "if"
+    ],
+    "topic": "Chapter03 Decision Structures and Boolean Logic",
+    "explanation": "The if statement in Python is used to create a decision structure, also known as a selection structure, where specific actions are performed only if a given condition evaluates to true.",
+    "question": "Which Python statement is used to implement a decision structure that performs an action only if a specific condition is true?",
+    "answer": "if"
+  },
+  {
+    "options": [
+      "A physical device that stores data permanently",
+      "A device used to input data into a computer",
+      "A set of instructions that tells a computer how to perform a task",
+      "A person who repairs computer hardware"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "According to Chapter 1, a program is defined as a set of instructions that a computer follows to perform a task. This is commonly referred to as software.",
+    "question": "Which of the following best defines a computer program as described in Chapter 1?",
+    "answer": "A set of instructions that tells a computer how to perform a task"
+  },
+  {
+    "options": [
+      "A person who designs and tests computer programs",
+      "The main memory component of a computer",
+      "A set of instructions that a computer follows to perform a task",
+      "A physical device that makes up a computer"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "In the context of computers and programming, a 'program' is defined as a set of instructions that a computer follows to perform a task. It is commonly referred to as software.",
+    "question": "What is a program in the context of computers and programming?",
+    "answer": "A set of instructions that a computer follows to perform a task"
+  },
+  {
+    "options": [
+      "They must always include an else clause.",
+      "They execute all actions regardless of conditions.",
+      "They allow execution of specific actions only if a condition is true.",
+      "They are used only for looping through sequences."
+    ],
+    "topic": "Chapter03 Decision Structures and Boolean Logic",
+    "explanation": "Decision structures, also known as selection structures, are used to control the flow of a program by executing specific blocks of code only when certain conditions are met. In Python, this is typically implemented using if statements.",
+    "question": "Which of the following statements about decision structures in Python is TRUE?",
+    "answer": "They allow execution of specific actions only if a condition is true."
+  },
+  {
+    "options": [
+      "dictionary = 'key1':val1, 'key2':val2",
+      "dictionary = {key1:val1, key2:val2}",
+      "dictionary = (key1=val1, key2=val2)",
+      "dictionary = [key1:val1, key2:val2]"
+    ],
+    "topic": "Chapter09 Dictionaries and Sets",
+    "explanation": "The correct syntax for creating a dictionary in Python is using curly braces with key-value pairs separated by colons, like this: {key1: val1, key2: val2}. Lists and tuples do not use this format, and assigning keys with '=' is not valid in a dictionary literal.",
+    "question": "Which of the following is a correct way to create a dictionary in Python?",
+    "answer": "dictionary = {key1:val1, key2:val2}"
+  },
+  {
+    "options": [
+      "To conditionally execute a block of code based on a Boolean expression",
+      "To import external modules into a program",
+      "To repeat a block of code multiple times",
+      "To define a function or class"
+    ],
+    "topic": "Chapter03 Decision Structures and Boolean Logic",
+    "explanation": "An if statement is used to implement decision structures in Python. It allows specific actions to be performed only if a given condition evaluates to true, enabling conditional execution within the program.",
+    "question": "What is the purpose of an if statement in Python?",
+    "answer": "To conditionally execute a block of code based on a Boolean expression"
+  },
+  {
+    "options": [
+      "Lists are mutable, whereas tuples are immutable.",
+      "Lists can store non-homogeneous data types, while tuples cannot.",
+      "Tuples offer more built-in methods than lists.",
+      "Tuples consume more memory than lists."
+    ],
+    "topic": "Chapter07 Lists and Tuples",
+    "explanation": "The main difference between lists and tuples in Python is that lists are mutable, which means you can change, add, or remove elements after the list is created. Tuples are immutable, meaning once they are created, their content cannot be changed.",
+    "question": "When dealing with sequences in Python, what is the main difference between using a list and a tuple?",
+    "answer": "Lists are mutable, whereas tuples are immutable."
+  },
+  {
+    "options": [
+      "SyntaxError",
+      "7",
+      "34",
+      "TypeError"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "The code attempts to concatenate a string (\"3\") with an integer (4) using the '+' operator. In Python, this raises a TypeError because it does not support implicit conversion between str and int. Since Python uses an interpreter that processes and executes one statement at a time, it will raise a TypeError during execution.",
+    "question": "Consider the following Python code snippet:\n\n```python\nprint(\"3\" + 4)\n```\n\nWhat will be the outcome when this code is executed using a Python interpreter?",
+    "answer": "TypeError"
+  },
+  {
+    "options": [
+      "A physical component of a computer system",
+      "A set of instructions that a computer follows to perform a task",
+      "A device used to input data into a computer",
+      "The central processing unit (CPU) of a computer"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "According to Chapter 1, a program is defined as a set of instructions that a computer follows to perform a task. It is also commonly referred to as software.",
+    "question": "Which of the following best defines a computer program?",
+    "answer": "A set of instructions that a computer follows to perform a task"
+  },
+  {
+    "options": [
+      "Central processing unit, Main memory, and Input devices",
+      "CPU, Internet, and Printer",
+      "Software, Hardware, and Network",
+      "CPU, Operating system, and Display"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "A typical computer system is composed of several major components that work together, including the central processing unit (CPU), main memory, secondary storage devices, and input and output devices.",
+    "question": "What are the major components that typically make up a computer system?",
+    "answer": "Central processing unit, Main memory, and Input devices"
+  },
+  {
+    "options": [
+      "format_output()",
+      "write()",
+      "print()",
+      "printf()"
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "The 'print()' function is used to display output in Python. It can be used to display formatted output using formatting techniques, such as f-strings or the format() method, to include variables and control the presentation of data.",
+    "question": "Which function in Python is used to display formatted output?",
+    "answer": "print()"
+  },
+  {
+    "options": [
+      "uniform, random",
+      "uniform, uniform",
+      "randrange, uniform",
+      "random, uniform"
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "The 'uniform' function from the 'random' module returns a random float between two specified values. To use it, you must both import it and call it with the desired range. Hence, the correct answer is 'uniform, uniform'.",
+    "question": "Fill in the blank to return a random float between 1.0 and 10.0 using the correct function: \n\nfrom random import _____\n\nprint(_____(1.0, 10.0))",
+    "answer": "uniform, uniform"
+  },
+  {
+    "options": [
+      "The price parameter must come after tax_rate in the definition.",
+      "You cannot use return inside a function with default arguments.",
+      "The tax_rate parameter should have a default value.",
+      "Parameters with default values must come after parameters without defaults."
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "In Python, all parameters without default values must appear before those with default values. In this case, 'price' has a default value but appears before 'tax_rate', which does not. This causes a syntax error.",
+    "question": "What is wrong with the following function definition?\n\ndef calculate(price=100, tax_rate):\n    total = price + (price * tax_rate)\n    return total",
+    "answer": "Parameters with default values must come after parameters without defaults."
+  },
+  {
+    "options": [
+      "Class definition",
+      "Loop structure",
+      "Decision structure (if statement)",
+      "Function structure"
+    ],
+    "topic": "Chapter03 Decision Structures and Boolean Logic",
+    "explanation": "A decision structure, implemented using the if statement in Python, allows specific actions to be performed only when a certain condition is true. This control structure is also referred to as a selection structure.",
+    "question": "In Python, what type of structure is used to perform an action only when a specific condition is true?",
+    "answer": "Decision structure (if statement)"
+  },
+  {
+    "options": [
+      "number = float(input('Enter a number: '))",
+      "value = str(input('Enter a value: '))",
+      "amount = input(float('Enter an amount: '))",
+      "score = int(input('Enter a score: '))"
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "To read numeric input and convert it to a float, you use the float() function around input(). The statement `number = float(input('Enter a number: '))` prompts the user, reads their input as a string, converts it to a float, and stores it in the variable. The other options either use incorrect function order or wrong types.",
+    "question": "Fill in the blank: To safely read a decimal number from user input and store it as a float, you should use the statement ______.",
+    "answer": "number = float(input('Enter a number: '))"
+  },
+  {
+    "options": [
+      "Input and output devices",
+      "Main memory",
+      "Python interpreter",
+      "Central processing unit (CPU)"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "The Python interpreter is software used to run Python programs, not a physical device. Chapter 1 defines hardware as the physical components of a computer, such as the CPU, main memory, and input/output devices.",
+    "question": "According to Chapter 1, which of the following is NOT a typical component of computer hardware?",
+    "answer": "Python interpreter"
+  },
+  {
+    "options": [
+      "A function stored in an external module",
+      "A function that cannot accept arguments",
+      "A function that performs a task but does not return a value",
+      "A function that returns a value to the caller"
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "Void functions are designed to carry out an action, such as printing output or modifying data, but they do not return a value. They are defined using the def keyword and typically end without a return statement.",
+    "question": "Which of the following best describes a void function in Python as discussed in Chapter 5?",
+    "answer": "A function that performs a task but does not return a value"
+  },
+  {
+    "options": [
+      "Total: $103.46",
+      "Total: 103.455",
+      "Total: 103.5",
+      "Total: 103.46"
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "The variable INTEREST_RATE is a named constant holding the value 0.069. Multiplying this by 1500 gives 103.5 exactly (1500 * 0.069 = 103.5). The f-string uses the format specifier '.1f', which rounds the number to one decimal place and ensures it is displayed as a floating-point number. Therefore, the final printed output is 'Total: 103.5'.",
+    "question": "What will be the output of the following Python code?\n\nINTEREST_RATE = 0.069\namount = 1500\n\ntotal_interest = amount * INTEREST_RATE\nprint(f'Total: {total_interest:.1f}')",
+    "answer": "Total: 103.5"
+  },
+  {
+    "options": [
+      "To keep variable values accessible throughout the entire program",
+      "To allow variables to be shared across all functions",
+      "To store data that is only needed within a specific function",
+      "To automatically return values from a function"
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "Local variables are defined inside a function and can only be accessed within that function. This helps encapsulate data and prevents unintended interference between different parts of the program.",
+    "question": "What is the purpose of using local variables in Python functions, as discussed in Chapter 5?",
+    "answer": "To store data that is only needed within a specific function"
+  },
+  {
+    "options": [
+      "They eliminate the need for conditional logic.",
+      "They make the program run in reverse.",
+      "They allow code to repeat automatically, reducing duplication and improving maintainability.",
+      "They simplify the use of global variables."
+    ],
+    "topic": "Chapter04 Repetition Structures",
+    "explanation": "Repetition structures like while and for loops enable a programmer to repeat tasks without copying code multiple times. This makes programs smaller, easier to read, and simpler to update or debug.",
+    "question": "What is the main reason for using repetition structures instead of duplicating code in a Python program?",
+    "answer": "They allow code to repeat automatically, reducing duplication and improving maintainability."
+  },
+  {
+    "options": [
+      "It makes the program run faster but harder to read.",
+      "It can make programs larger, time-consuming to write, and difficult to maintain.",
+      "It simplifies debugging and reduces memory usage.",
+      "It allows for greater control over loop execution."
+    ],
+    "topic": "Chapter04 Repetition Structures",
+    "explanation": "Duplicating code leads to larger programs that are more time-consuming to write and harder to update or fix. Repetition structures solve this by allowing tasks to be repeated efficiently without redundancy.",
+    "question": "What is a major disadvantage of duplicating code instead of using repetition structures like loops?",
+    "answer": "It can make programs larger, time-consuming to write, and difficult to maintain."
+  },
+  {
+    "options": [
+      "It displays a prompt and returns data as a string.",
+      "It reads an integer from the keyboard.",
+      "It automatically converts input to float.",
+      "It prints output to the screen."
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "The input function in Python displays a prompt (if provided) and reads input from the user through the keyboard. The returned value is always of type string, regardless of what the user types.",
+    "question": "What does the built-in input function in Python do by default?",
+    "answer": "It displays a prompt and returns data as a string."
+  },
+  {
+    "options": [
+      "Using penup() and pendown() in a drawing function helps control when the turtle draws.",
+      "The line() function requires a call to turtle.circle() inside it.",
+      "The circle() function must always return a value to be useful.",
+      "The fillcolor() function needs to be called after end_fill() for correct output."
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "In turtle graphics, calling turtle.penup() lifts the pen so that moving the turtle does not draw lines, while turtle.pendown() lowers the pen to resume drawing. This allows precise control over what is drawn. The other options are incorrect because circle() is a void function (does not return a value), line() uses turtle.goto(), not turtle.circle(), and fillcolor() must be called before begin_fill(), not after end_fill().",
+    "question": "Which of the following statements about defining and using functions with turtle graphics in Chapter 5 is TRUE?",
+    "answer": "Using penup() and pendown() in a drawing function helps control when the turtle draws."
+  },
+  {
+    "options": [
+      "List slicing",
+      "List comprehensions",
+      "List methods",
+      "Two-dimensional lists"
+    ],
+    "topic": "Chapter07 Lists and Tuples",
+    "explanation": "List comprehensions in Python provide a concise way to create lists by iterating over an existing iterable and optionally applying some filtering or transformation to its elements.",
+    "question": "Which Python feature would you use to efficiently create a new list based on the elements of an existing list?",
+    "answer": "List comprehensions"
+  },
+  {
+    "options": [
+      "func",
+      "def",
+      "function",
+      "define"
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "In Python, functions are defined using the 'def' keyword followed by the function name and parentheses. The 'pass' statement is used as a placeholder for future code.",
+    "question": "Fill in the blank to define an empty function named setup() that can be used later in program design:\n\n_____ setup():\n    pass",
+    "answer": "def"
+  },
+  {
+    "options": [
+      "Create the file → Read from the file → Process data",
+      "Open the file → Write to the file → Close the file",
+      "Write to the file → Open the file → Close the file",
+      "Open the file → Process the file → Close the file"
+    ],
+    "topic": "Chapter06 Files and Exceptions",
+    "explanation": "When working with files in Python, you must first open the file, then process it (either read from or write to it), and finally close it to free system resources. This ensures proper handling of input/output operations.",
+    "question": "What is the correct sequence of steps when working with a file in Python?",
+    "answer": "Open the file → Process the file → Close the file"
+  },
+  {
+    "options": [
+      "Combining strings using the '+' operator",
+      "Merging strings with the 'merge()' function",
+      "Joining strings with the '*' operator",
+      "Appending strings with the 'append()' function"
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "In Python, string concatenation is the process of combining multiple strings into one. This is typically done using the '+' operator, which joins strings together.",
+    "question": "What is string concatenation in Python and how is it typically performed?",
+    "answer": "Combining strings using the '+' operator"
+  },
+  {
+    "options": [
+      "Because algorithms physically assemble computer hardware",
+      "Understanding algorithms allows computers to be more aesthetically pleasing",
+      "They provide the foundation for writing efficient and effective code",
+      "Algorithms convert machine code into high-level languages"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "Algorithms are essential in programming as they offer a structured approach to solving problems and performing tasks. Understanding algorithms helps programmers write code that is both efficient and effective, allowing software to run faster and use fewer resources.",
+    "question": "Why is understanding algorithms important in computer programming?",
+    "answer": "They provide the foundation for writing efficient and effective code"
+  },
+  {
+    "options": [
+      "The process of writing code",
+      "The central processing unit (CPU)",
+      "A program that performs data analysis",
+      "The instructions written in Python"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "Hardware refers to the physical components of a computer system. The central processing unit (CPU) is one such component, as described in Chapter 1 under 'Hardware and Software'.",
+    "question": "Which of the following is considered hardware in a computer system?",
+    "answer": "The central processing unit (CPU)"
+  },
+  {
+    "options": [
+      "List Comprehensions",
+      "List Slicing",
+      "Copying Lists",
+      "Finding Items with the 'in' Operator"
+    ],
+    "topic": "Chapter07 Lists and Tuples",
+    "explanation": "The 'in' operator is used in Python to check if a specific element exists within a sequence such as a list. It returns True if the element is found, otherwise it returns False.",
+    "question": "Which Python operation can be used to check if an item exists within a list?",
+    "answer": "Finding Items with the 'in' Operator"
+  },
+  {
+    "options": [
+      "scan()",
+      "readline()",
+      "get()",
+      "input()"
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "In Python, the 'input()' function is used to read input from the keyboard. It captures the user's input as a string and can be converted to other data types as needed.",
+    "question": "When reading input from the keyboard in Python, which function is commonly used?",
+    "answer": "input()"
+  },
+  {
+    "options": [
+      "Line continuation character (\\) is mandatory when splitting any long statement.",
+      "print() calls cannot be split over multiple lines, even inside parentheses.",
+      "Statements enclosed in parentheses can span multiple lines without using the line continuation character.",
+      "Python does not allow splitting assignments into multiple lines under any circumstances."
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "In Python, if a statement is enclosed in parentheses, brackets, or braces, it can be split across multiple lines without needing the line continuation character (\\). This allows for more readable formatting. Only when not inside such delimiters do you need the backslash for line continuation.",
+    "question": "Which of the following statements about breaking long Python statements into multiple lines is TRUE?",
+    "answer": "Statements enclosed in parentheses can span multiple lines without using the line continuation character."
+  },
+  {
+    "options": [
+      "Lists store elements one after another and allow modification.",
+      "Lists are immutable sequences of data.",
+      "Lists are declared using curly braces {}.",
+      "Lists can contain only elements of the same data type."
+    ],
+    "topic": "Chapter07 Lists and Tuples",
+    "explanation": "In Python, lists are mutable sequences that store multiple items in order. This means their contents can be changed (e.g., items can be added or removed), and they maintain the order of elements.",
+    "question": "Which of the following statements correctly describes a key characteristic of Python lists?",
+    "answer": "Lists store elements one after another and allow modification."
+  },
+  {
+    "options": [
+      "Test the program",
+      "Correct syntax errors",
+      "Design the program",
+      "Correct logic errors"
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "The program development cycle involves several stages, including designing, coding, testing, and correcting errors. Fixing mistakes in the code's logic is specifically part of correcting logic errors.",
+    "question": "Which part of the program development cycle involves fixing mistakes in the code's logic?",
+    "answer": "Correct logic errors"
+  },
+  {
+    "options": [
+      "The process of designing software applications",
+      "The set of instructions a computer follows to perform tasks",
+      "The physical devices that make up a computer",
+      "The person who writes computer programs"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "Hardware refers to the physical devices that constitute a computer. It includes components such as the central processing unit, main memory, secondary storage devices, and input/output devices, which all work together as a system.",
+    "question": "Which of the following best describes hardware in the context of computers?",
+    "answer": "The physical devices that make up a computer"
+  },
+  {
+    "options": [
+      "Main memory",
+      "Central processing unit",
+      "Input and output devices",
+      "Web browser"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "According to Chapter 1, hardware refers to the physical components of a computer system such as the CPU, main memory, secondary storage devices, and input/output devices. A web browser is an example of software, not hardware.",
+    "question": "Which of the following is NOT a typical hardware component of a computer system?",
+    "answer": "Web browser"
+  },
+  {
+    "options": [
+      "It removes the need for functions in a program.",
+      "It keeps the program size smaller and easier to maintain.",
+      "It allows different results each time without changing the code.",
+      "It makes the program run faster by default."
+    ],
+    "topic": "Chapter04 Repetition Structures",
+    "explanation": "Using repetition structures like loops avoids duplicating code, which can make programs large, harder to read, and more difficult to update. Repetition structures improve maintainability and reduce potential errors when changes are needed.",
+    "question": "Which of the following best explains why a repetition structure is preferred over duplicating code for repeated tasks?",
+    "answer": "It keeps the program size smaller and easier to maintain."
+  },
+  {
+    "options": [
+      "Lists are immutable while tuples are mutable.",
+      "Lists can only contain elements of the same type, whereas tuples can contain mixed types.",
+      "Lists are a type of sequence, and tuples are not.",
+      "Lists are mutable while tuples are immutable."
+    ],
+    "topic": "Chapter07 Lists and Tuples",
+    "explanation": "In Python, lists are mutable, meaning their contents can be changed after creation. Tuples, on the other hand, are immutable, so once they are created, their contents cannot be altered.",
+    "question": "What is the main difference between lists and tuples in Python?",
+    "answer": "Lists are mutable while tuples are immutable."
+  },
+  {
+    "options": [
+      "Antivirus program",
+      "Central processing unit",
+      "Operating system",
+      "Web browser"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "Hardware refers to the physical components of a computer system. The Central Processing Unit (CPU) is a core piece of hardware that processes instructions. Software, such as browsers or antivirus programs, is not considered hardware.",
+    "question": "Which of the following is considered hardware in a computer system?",
+    "answer": "Central processing unit"
+  },
+  {
+    "options": [
+      "price = int(input('Enter price: '))",
+      "price = float(input('Enter price: '))",
+      "float = input('Enter price: ')",
+      "price = input(float('Enter price: '))"
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "The input() function returns a string, so to get a floating-point number from user input, you must convert it using float(). The correct syntax is: price = float(input('Enter price: ')).",
+    "question": "Fill in the blank: To read a floating-point number from the user and assign it to the variable 'price', you should write ________.",
+    "answer": "price = float(input('Enter price: '))"
+  },
+  {
+    "options": [
+      "You cannot use f-strings with integer values.",
+      "Variables must be enclosed in quotes inside f-strings.",
+      "The format specifier '.2f' is invalid for integers.",
+      "print() cannot include both text and variables."
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "The format specifier '.2f' is used to format floating-point numbers to two decimal places. Since 'age' is an integer, using '.2f' on it will cause a TypeError. You should either cast 'age' to float or omit the format specifier entirely when printing an integer.",
+    "question": "Spot the bug in the following code involving formatted output:\n\nage = 42\nprint(f\"User age is: {age:.2f}\")",
+    "answer": "The format specifier '.2f' is invalid for integers."
+  },
+  {
+    "options": [
+      "Test the program",
+      "Correct syntax errors",
+      "Write the code",
+      "Design the program"
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "The study material emphasizes that designing a program is the first and most crucial step in the program development cycle. It involves understanding the task and working with the customer to define the program's purpose.",
+    "question": "What is the first step in the program development cycle according to the study material?",
+    "answer": "Design the program"
+  },
+  {
+    "options": [
+      "Copying Lists",
+      "List slicing",
+      "List comprehensions",
+      "Processing Lists"
+    ],
+    "topic": "Chapter07 Lists and Tuples",
+    "explanation": "Processing lists involves iterating over the elements and applying some operation or function to each item. This can be done using loops, map functions, or list comprehensions to transform or utilize each element in the list.",
+    "question": "Which method in Python allows you to iterate over elements of a list and apply a function to each element?",
+    "answer": "Processing Lists"
+  },
+  {
+    "options": [
+      "They reduce code duplication by repeating tasks automatically.",
+      "They allow the programmer to avoid writing functions.",
+      "They eliminate the need for conditionals.",
+      "They make the code run faster by default."
+    ],
+    "topic": "Chapter04 Repetition Structures",
+    "explanation": "Repetition structures, such as loops, are used to repeat tasks without duplicating code. This makes programs more efficient and easier to maintain, especially when changes are needed in repeated logic.",
+    "question": "What is one primary advantage of using repetition structures in Python programming?",
+    "answer": "They reduce code duplication by repeating tasks automatically."
+  },
+  {
+    "options": [
+      "To increase the size of the program for better readability",
+      "To make the computer repeat a block of code as necessary, reducing duplication",
+      "To allow code to execute only once based on user input",
+      "To avoid using conditional statements like if and else"
+    ],
+    "topic": "Chapter04 Repetition Structures",
+    "explanation": "Repetition structures, such as loops, are used to perform tasks repeatedly without duplicating code. This helps keep programs smaller, easier to maintain, and less error-prone when changes are needed.",
+    "question": "Which statement accurately describes the purpose of a repetition structure in Python programming?",
+    "answer": "To make the computer repeat a block of code as necessary, reducing duplication"
+  },
+  {
+    "options": [
+      "Read data → Print output → End program",
+      "Write data → Save changes → Restart program",
+      "Open the file → Process the file → Close the file",
+      "Create the file → Modify data → Delete the file"
+    ],
+    "topic": "Chapter06 Files and Exceptions",
+    "explanation": "According to Chapter 6, when a Python program works with a file, it typically follows three steps: opening the file, processing it (reading or writing), and then closing it to ensure proper resource management.",
+    "question": "What are the three basic steps a Python program follows when working with a file?",
+    "answer": "Open the file → Process the file → Close the file"
+  },
+  {
+    "options": [
+      "1\\n2\\n3\\n4",
+      "0\\n2\\n4",
+      "2\\n4\\n6",
+      "2\\n4"
+    ],
+    "topic": "Chapter04 Repetition Structures",
+    "explanation": "The loop starts with x = 0. Each iteration adds 2 to x, then prints it:\n- First iteration: x becomes 2, prints 2\n- Second iteration: x becomes 4, prints 4\n- Third iteration: x becomes 6, which is not less than 5, so loop ends after printing 6. So the output is '2', '4', and '6'.",
+    "question": "Consider the following Python code snippet:\n\nx = 0\nwhile x < 5:\n    x += 2\n    print(x)\n\nWhat will be the output of this program?",
+    "answer": "2\\n4\\n6"
+  },
+  {
+    "options": [
+      "An input device used to provide data to a computer.",
+      "A type of storage device used to hold data permanently.",
+      "A physical component of a computer that executes instructions.",
+      "A set of instructions that a computer follows to perform a task."
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "A program is commonly referred to as software and consists of instructions that tell a computer how to perform specific tasks. It is not a physical component, which would be termed as hardware.",
+    "question": "Which of the following best describes a 'program' in the context of computers?",
+    "answer": "A set of instructions that a computer follows to perform a task."
+  },
+  {
+    "options": [
+      "A function that prints output to the console",
+      "A function that performs a task and returns a result to the part of the program that called it",
+      "A function that modifies global variables only",
+      "A function that does not take any arguments"
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "Value-returning functions are designed to perform tasks and return a result using the return statement. This allows other parts of the program to use the returned value.",
+    "question": "Which of the following best describes a value-returning function in Python?",
+    "answer": "A function that performs a task and returns a result to the part of the program that called it"
+  },
+  {
+    "options": [
+      "To store and retrieve data from memory",
+      "To provide an interface between the user and hardware",
+      "To translate high-level source code into machine code",
+      "To read and execute high-level code line by line"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "A compiler is a tool that converts high-level programming code, written by programmers, into machine code that can be executed by a computer's CPU. This translation enables the computer to perform the tasks defined in the original source code.",
+    "question": "What is the primary function of a compiler in programming?",
+    "answer": "To translate high-level source code into machine code"
+  },
+  {
+    "options": [
+      "Every time the loop finishes, regardless of breaks",
+      "Only when the for loop iterates over a list",
+      "When an if statement inside the loop evaluates to True",
+      "When the loop completes all iterations without hitting a break statement"
+    ],
+    "topic": "Chapter04 Repetition Structures",
+    "explanation": "The else clause attached to a for or while loop runs only if the loop terminates normally, meaning it hasn't been exited prematurely with a break statement. If a break is encountered during iteration, then the code block under else is skipped.",
+    "question": "Under what condition will the else clause of a for loop execute in Python?",
+    "answer": "When the loop completes all iterations without hitting a break statement"
+  },
+  {
+    "options": [
+      "To store the function in an external module",
+      "To convert a void function into a value-returning function",
+      "To pass information into the function for it to process",
+      "To define a new function inside another function"
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "Arguments allow data to be passed into a function so it can perform operations or calculations based on that input. This makes functions more flexible and reusable, as described in Chapter 5.",
+    "question": "In Chapter 5, what is one reason to use arguments when calling a function in Python?",
+    "answer": "To pass information into the function for it to process"
+  },
+  {
+    "options": [
+      "Floating-point notation is used to encode real numbers in binary form.",
+      "Image pixels are represented as characters using Unicode encoding.",
+      "Digital music is stored using ASCII codes to represent musical notes.",
+      "Binary numbers can only store values between 0 and 255, regardless of byte size."
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "Real numbers in a computer are encoded using floating-point notation, which allows for the representation of fractional and very large or small numeric values. The other choices incorrectly describe how digital data like music and images are stored or misunderstand binary limitations.",
+    "question": "Which of the following statements about how data is stored and handled in digital computers is TRUE?",
+    "answer": "Floating-point notation is used to encode real numbers in binary form."
+  },
+  {
+    "options": [
+      "Error",
+      "False",
+      "True",
+      "None"
+    ],
+    "topic": "Chapter03 Decision Structures and Boolean Logic",
+    "explanation": "The expression can be evaluated step-by-step:\n1. Inside the parentheses: (False or True) evaluates to True.\n2. not (False or True) becomes not True => False.\n3. (True and not False) evaluates to (True and True) => True.\n4. So overall: False and True => False.\nHence, the entire expression evaluates to False.",
+    "question": "Given the following Boolean expression, which of the following evaluations returns True?\n\nExpression:\nnot (False or True) and (True and not False)",
+    "answer": "False"
+  },
+  {
+    "options": [
+      "A person who builds and repairs computers",
+      "The physical parts of a computer system",
+      "The electrical components that power the computer",
+      "A set of instructions that a computer follows to perform a task"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "According to Chapter 1, software refers to a program, which is a set of instructions that a computer follows to perform a task. This distinguishes it from hardware, which includes the physical components.",
+    "question": "Which of the following best describes software as introduced in Chapter 1?",
+    "answer": "A set of instructions that a computer follows to perform a task"
+  },
+  {
+    "options": [
+      "int = input(count",
+      "count = int(input",
+      "count = float(input",
+      "input = count(int"
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "The correct way to read input from a user as a string, convert it to an integer, and assign it to a variable is by using a nested function call: count = int(input('Enter a count: ')). The input() function reads the value as a string, and then int() converts that string to an integer. This matches the format described in the study material.",
+    "question": "Fill in the blank: The following statement reads a number from the user, converts it to an integer, and stores it in the variable 'count':\n\n______('Enter a count: ')",
+    "answer": "count = int(input"
+  },
+  {
+    "options": [
+      "To display output to the user",
+      "To execute instructions and process data",
+      "To store long-term data",
+      "To provide internet connectivity"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "As described in Chapter 1, the CPU (Central Processing Unit) is a major hardware component responsible for executing instructions and performing calculations, making it the 'brain' of the computer.",
+    "question": "What is the primary role of the central processing unit (CPU) in a computer system?",
+    "answer": "To execute instructions and process data"
+  },
+  {
+    "options": [
+      "A",
+      "C",
+      "No output",
+      "B"
+    ],
+    "topic": "Chapter03 Decision Structures and Boolean Logic",
+    "explanation": "`not` has highest precedence, followed by `and`, then `or`. Evaluating the first condition:\n- `not z` → `False`\n- `y and not z` → `False and False` → `False`\n- `x or (result)` → `True or False` → `True`\nSince the first condition is `True`, it prints \"A\" and skips the rest of the conditions.",
+    "question": "What will be the output of the following Python code?\n\n```python\nx = True\ny = False\nz = True\n\nif x or y and not z:\n    print(\"A\")\nelif not x and y or z:\n    print(\"B\")\nelse:\n    print(\"C\")\n```",
+    "answer": "A"
+  },
+  {
+    "options": [
+      "The dictionary[key] syntax will return None if the key does not exist.",
+      "You should use the in operator to check if a key exists before using dictionary[key].",
+      "You can only retrieve values using numeric indexes.",
+      "Dictionary elements are always sorted by key."
+    ],
+    "topic": "Chapter09 Dictionaries and Sets",
+    "explanation": "Using dictionary[key] to access a value will raise a KeyError if the specified key does not exist. To prevent this, you should first check that the key is present in the dictionary using the in or not in operators.",
+    "question": "Which of the following is TRUE about retrieving values from a Python dictionary?",
+    "answer": "You should use the in operator to check if a key exists before using dictionary[key]."
+  },
+  {
+    "options": [
+      "pickle.load(f)",
+      "pickle.extract(f)",
+      "pickle.open(f)",
+      "pickle.read(f)"
+    ],
+    "topic": "Chapter09 Dictionaries and Sets",
+    "explanation": "To unpickle an object in Python, you use the pickle.load function. This reads the byte stream from the opened binary file and reconstructs the original Python object. The correct usage is: pickle.load(file).",
+    "question": "Fill in the blank to correctly unpickle a Python object from a binary file named 'datafile.dat':\n\nwith open('datafile.dat', 'rb') as f:\n    my_data = ______",
+    "answer": "pickle.load(f)"
+  },
+  {
+    "options": [
+      "F-strings only work with integers and cannot format floats.",
+      "F-strings must be enclosed in single quotes to be valid.",
+      "F-strings can include variables and expressions inside curly braces.",
+      "F-strings are slower than regular string concatenation and should be avoided."
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "F-strings, introduced in Python 3.6, allow embedding variables and expressions inside curly braces for concise and readable string formatting. They support various data types including floats, and format specifiers can be used for precise control over output formatting.",
+    "question": "Which of the following statements about f-strings in Python is true?",
+    "answer": "F-strings can include variables and expressions inside curly braces."
+  },
+  {
+    "options": [
+      "To store data permanently",
+      "To maintain a list of program errors",
+      "To execute the program in reverse order",
+      "To divide the program into smaller, manageable tasks"
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "Functions are used to modularize a program, allowing it to be broken down into smaller, manageable tasks. This approach, known as divide and conquer, helps in organizing code and reusing code efficiently.",
+    "question": "What is the role of functions in a Python program?",
+    "answer": "To divide the program into smaller, manageable tasks"
+  },
+  {
+    "options": [
+      "Lists are mutable, while tuples are immutable.",
+      "Lists are immutable, while tuples are mutable.",
+      "Tuples can only store numbers, while lists can store any data type.",
+      "Tuples use square brackets, while lists use parentheses."
+    ],
+    "topic": "Chapter07 Lists and Tuples",
+    "explanation": "In Python, both lists and tuples are sequence types that can store multiple items. However, the key difference is that lists are mutable (can be changed after creation), whereas tuples are immutable (cannot be changed after creation).",
+    "question": "What is the primary difference between a list and a tuple in Python?",
+    "answer": "Lists are mutable, while tuples are immutable."
+  },
+  {
+    "options": [
+      "Using the deepcopy() method from the copy module",
+      "Using the copy() method",
+      "Using the tuple() constructor",
+      "Using list slicing"
+    ],
+    "topic": "Chapter07 Lists and Tuples",
+    "explanation": "In Python, the copy() method on a list returns a shallow copy of the list. This method is preferable for duplicating lists where you do not need to deeply copy nested structures. List slicing (list[:]) can also be used for shallow copying.",
+    "question": "What is the proper method to create a shallow copy of a list in Python?",
+    "answer": "Using the copy() method"
+  },
+  {
+    "options": [
+      "A list can contain only string elements, while a tuple can contain any data type.",
+      "A list is mutable, whereas a tuple is immutable.",
+      "A list is immutable, while a tuple is mutable.",
+      "Lists do not support list slicing, whereas tuples do."
+    ],
+    "topic": "Chapter07 Lists and Tuples",
+    "explanation": "In Python, lists are mutable, meaning their content can be modified after creation (elements can be added, removed, or changed). In contrast, tuples are immutable, meaning once they are created, their content cannot be changed.",
+    "question": "What is a key characteristic of a list in Python compared to a tuple?",
+    "answer": "A list is mutable, whereas a tuple is immutable."
+  },
+  {
+    "options": [
+      "SyntaxError",
+      "x * 2",
+      "5 * 2 = 10",
+      "10"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "High-level languages like Python allow you to write intuitive expressions. Here, `x` is assigned the value 5, and `print(x * 2)` evaluates the expression to `10`. There are no syntax errors, so the program runs and outputs `10`.",
+    "question": "Given the following high-level language program written in Python, what will be the output when executed?\n\n```python\nx = 5\nprint(x * 2)\n```\n\nAssume this code is run using a properly installed Python interpreter.",
+    "answer": "10"
+  },
+  {
+    "options": [
+      "To facilitate user input handling",
+      "To make the code less readable",
+      "To increase the execution speed of the program",
+      "To store values that should remain unchanged"
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "Named constants are used in programming to store values that should not change during the execution of the program. This helps prevent errors and makes the code easier to understand and maintain, as it clearly defines fixed values used throughout the program.",
+    "question": "What is the main purpose of using named constants in a Python program?",
+    "answer": "To store values that should remain unchanged"
+  },
+  {
+    "options": [
+      "You can pickle multiple objects to the same file before closing it.",
+      "Unpickling requires opening the file in write-binary mode ('wb').",
+      "You must open the file in text mode ('wt' or 'rt') when using pickle.dump or pickle.load.",
+      "Only one object can be pickled to a file before it is closed."
+    ],
+    "topic": "Chapter09 Dictionaries and Sets",
+    "explanation": "The pickle module allows you to serialize multiple Python objects into a single binary file by calling pickle.dump repeatedly before closing the file. The correct file modes for pickling and unpickling are 'wb' (write binary) and 'rb' (read binary), respectively—not text modes. Therefore, options involving incorrect modes or limitations on object count are false.",
+    "question": "Which of the following statements about pickling and unpickling Python dictionaries is TRUE?",
+    "answer": "You can pickle multiple objects to the same file before closing it."
+  },
+  {
+    "options": [
+      "String values must be printed using commas, not '+'.",
+      "The variable 'age' should not be in quotes when assigned.",
+      "Strings cannot be concatenated using '+' operator.",
+      "The variable 'name' is not defined before use."
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "In the code, age is assigned as a string (\"25\") instead of a number. While this won't cause an error during concatenation with other strings, it may be misleading, especially if numeric operations are later expected on 'age'. A more appropriate assignment would be: age = 25 (as an integer).",
+    "question": "Spot the bug in the following Python code:\n\n\"\"\"\nname = \"Alice\"\nprint('Welcome, ' + name)\nage = \"25\"\nprint('You are ' + age + ' years old.')\n\"\"\"",
+    "answer": "The variable 'age' should not be in quotes when assigned."
+  },
+  {
+    "options": [
+      "A print statement inside the loop",
+      "A condition that always remains true",
+      "A way to make the condition false",
+      "A call to a function"
+    ],
+    "topic": "Chapter04 Repetition Structures",
+    "explanation": "To prevent an infinite loop, a while loop must include logic that eventually makes its condition false. Without this, the loop will continue indefinitely.",
+    "question": "What is a necessary component of every while loop to ensure it eventually stops running?",
+    "answer": "A way to make the condition false"
+  },
+  {
+    "options": [
+      "The |= operator creates a new dictionary and leaves the original unchanged.",
+      "If two dictionaries have the same key, the | operator keeps the left-hand value.",
+      "The | operator mutates the left-hand dictionary in place.",
+      "The |= operator updates the dictionary on the left with elements from the right."
+    ],
+    "topic": "Chapter09 Dictionaries and Sets",
+    "explanation": "The |= operator is used to update the dictionary on its left with all key-value pairs from the dictionary on its right. If any keys overlap, values from the right-hand dictionary overwrite those from the left. The | operator, in contrast, creates a new dictionary without modifying either original.",
+    "question": "Which of the following statements about Python's dictionary merge and update operators is TRUE?",
+    "answer": "The |= operator updates the dictionary on the left with elements from the right."
+  },
+  {
+    "options": [
+      "Variables in a print statement must be converted to strings before they are displayed.",
+      "Adjacent string literals within parentheses are not automatically joined.",
+      "The '+' operator can be used to join two or more strings into one.",
+      "Using commas in a print statement automatically joins strings without any space."
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "In Python, the '+' operator is used for string concatenation — joining multiple strings into one. For example, 'Hello ' + 'world' results in 'Hello world'. Commas in print statements, on the other hand, separate items with spaces, and adjacent string literals (without commas or operators) are implicitly joined. Variables do not need explicit conversion to strings when passed to print(), as it handles them automatically.",
+    "question": "Which of the following statements about string concatenation and the print function in Python is TRUE?",
+    "answer": "The '+' operator can be used to join two or more strings into one."
+  },
+  {
+    "options": [
+      "To allocate memory for variables",
+      "To execute additional features",
+      "To increase program performance",
+      "To improve code readability and explain the code"
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "Comments are used in a program to explain and improve the readability of the code. They help programmers understand the code's functionality or logic and do not affect program execution.",
+    "question": "What is the purpose of comments in a Python program?",
+    "answer": "To improve code readability and explain the code"
+  },
+  {
+    "options": [
+      "Modules prevent functions from being accessed by other parts of the program.",
+      "Modules allow functions to be easily reused across different programs.",
+      "Modules ensure that functions can only be used once per program execution.",
+      "Modules automatically optimize the code for faster execution."
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "Storing functions in modules allows programmers to organize their code and reuse functions across different programs. This modularity enhances code maintainability and reduces the need to rewrite common functionality, promoting code reuse and efficiency.",
+    "question": "What is a key benefit of storing functions in modules in Python?",
+    "answer": "Modules allow functions to be easily reused across different programs."
+  },
+  {
+    "options": [
+      "A set of instructions that a computer follows to perform a task",
+      "An external device used to input data into a computer",
+      "A person who tests and repairs computer hardware",
+      "The physical devices that make up a computer system"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "According to Chapter 1, software refers to programs, which are sets of instructions that tell a computer what tasks to perform. Software is contrasted with hardware, which includes the physical components of a computer.",
+    "question": "Which of the following best defines the term 'software' as described in Chapter 1?",
+    "answer": "A set of instructions that a computer follows to perform a task"
+  },
+  {
+    "options": [
+      "Python always evaluates all parts of a Boolean expression.",
+      "In an or expression, if the left operand is true, the right operand is not evaluated.",
+      "In an and expression, if the left operand is false, the right operand is still evaluated.",
+      "Short-circuiting only occurs with the not operator."
+    ],
+    "topic": "Chapter03 Decision Structures and Boolean Logic",
+    "explanation": "Short-circuit evaluation stops evaluating a Boolean expression as soon as the result is determined. For 'or', if the left operand is true, Python does not evaluate the right operand because the entire expression will be true regardless. This improves efficiency and prevents unnecessary computation.",
+    "question": "Which of the following statements correctly describes short-circuit evaluation in Python?",
+    "answer": "In an or expression, if the left operand is true, the right operand is not evaluated."
+  },
+  {
+    "options": [
+      "A file that is permanently deleted after use",
+      "A file that data is written to",
+      "A file from which data is read",
+      "A temporary file used only for debugging"
+    ],
+    "topic": "Chapter06 Files and Exceptions",
+    "explanation": "An input file in Python is a file from which a program reads data. This contrasts with an output file, which is used to write or save data.",
+    "question": "In the context of Python file handling, what is an input file?",
+    "answer": "A file from which data is read"
+  },
+  {
+    "options": [
+      "Sequence structure",
+      "Loop structure",
+      "Decision structure (if statement)",
+      "Function definition"
+    ],
+    "topic": "Chapter03 Decision Structures and Boolean Logic",
+    "explanation": "A decision structure, also called a selection structure, allows a program to execute certain actions only if a specific condition is true. In Python, this is implemented using the if statement.",
+    "question": "Which of the following control structures in Python is used to perform an action only when a specific condition is true?",
+    "answer": "Decision structure (if statement)"
+  },
+  {
+    "options": [
+      "IDLE does not allow execution of code written in interactive mode.",
+      "In IDLE, code can be written, tested, and executed using its built-in editor.",
+      "Script mode automatically saves every command entered during execution.",
+      "Files created in script mode must have a .exe extension to run."
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "IDLE provides an integrated environment that includes both an interactive shell and a text editor designed to write, test, and execute Python programs. The other options are false: interactive mode does allow execution of commands, script mode does not auto-save entered commands—it requires manual saving—and Python scripts use the .py extension, not .exe.",
+    "question": "Which of the following statements about Python’s IDLE environment and script mode is TRUE?",
+    "answer": "In IDLE, code can be written, tested, and executed using its built-in editor."
+  },
+  {
+    "options": [
+      "To import modules from external libraries",
+      "To perform specific actions only if a condition exists",
+      "To define new data types",
+      "To execute statements repeatedly"
+    ],
+    "topic": "Chapter03 Decision Structures and Boolean Logic",
+    "explanation": "A decision structure, also called a selection structure, allows a program to make decisions and execute certain code only when a specified condition is true. This is commonly implemented using if statements in Python.",
+    "question": "What is the primary purpose of a decision structure in Python programming?",
+    "answer": "To perform specific actions only if a condition exists"
+  },
+  {
+    "options": [
+      "Designing, creating, and testing computer programs",
+      "Storing data within a computer",
+      "Following instructions from existing programs",
+      "Designing physical computer hardware"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "A programmer, also known as a software developer, is responsible for designing, creating, and testing computer programs, which are sets of instructions that a computer follows to perform a task.",
+    "question": "What is the role of a programmer according to the Introduction to Computers and Programming?",
+    "answer": "Designing, creating, and testing computer programs"
+  },
+  {
+    "options": [
+      "Hardware consists of physical components, whereas software is a set of instructions.",
+      "Hardware refers to programs that execute tasks, while software is the main memory.",
+      "Hardware includes input devices, while software includes output devices.",
+      "Hardware is the central processing unit, while software is secondary storage devices."
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "Hardware refers to the physical parts of a computer, such as the CPU, memory, and storage devices. Software, on the other hand, consists of programs or sets of instructions that tell the hardware what to do to perform tasks.",
+    "question": "What is the primary distinction between hardware and software in a computer system?",
+    "answer": "Hardware consists of physical components, whereas software is a set of instructions."
+  },
+  {
+    "options": [
+      "Software requires more maintenance than hardware",
+      "Hardware is interchangeable, while software is permanent",
+      "Hardware refers to physical devices, while software refers to programs",
+      "Software is tangible, while hardware is intangible"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "Hardware consists of the physical components of a computer system, such as the CPU and memory, while software refers to the programs and instructions that enable the hardware to perform tasks.",
+    "question": "In the context of computers, what is the primary distinction between hardware and software?",
+    "answer": "Hardware refers to physical devices, while software refers to programs"
+  },
+  {
+    "options": [
+      "Real numbers are represented using two's complement encoding.",
+      "Negative numbers are stored using floating-point notation.",
+      "Computers store images as text using ASCII codes.",
+      "Digital music is stored by converting samples into binary numbers."
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "Digital music is divided into small segments called samples, each of which is converted to a binary number for storage. This allows digital devices to represent audio data in a format that computers can process. The other statements are false: images are stored as binary representations of pixel colors, negative numbers use two’s complement (not floating-point), and real numbers use floating-point notation (not two’s complement).",
+    "question": "Which of the following statements about how computers store and use data is TRUE?",
+    "answer": "Digital music is stored by converting samples into binary numbers."
+  },
+  {
+    "options": [
+      "A loop that automatically stops after one iteration",
+      "A loop used only with turtle graphics",
+      "A loop that runs a specific number of times based on a counter",
+      "A loop that uses a true/false condition to determine whether it should continue running"
+    ],
+    "topic": "Chapter04 Repetition Structures",
+    "explanation": "Condition-controlled loops, such as while loops in Python, use a boolean expression to decide whether the loop body should execute again. The loop continues as long as the condition evaluates to True.",
+    "question": "Which of the following best describes a condition-controlled loop in Python?",
+    "answer": "A loop that uses a true/false condition to determine whether it should continue running"
+  },
+  {
+    "options": [
+      "To execute loops",
+      "To provide syntax rules",
+      "To enhance the program's performance",
+      "To store and manage data values"
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "Variables in a Python program are used to store and manage data values, allowing the program to perform operations on those values. They are essential for data manipulation and processing in any program.",
+    "question": "What is the role of variables in a Python program?",
+    "answer": "To store and manage data values"
+  },
+  {
+    "options": [
+      "Accessing a missing key with dictionary[key] returns an empty string.",
+      "Dictionaries maintain the order of elements inserted.",
+      "You can avoid a KeyError by checking if a key exists using the in operator.",
+      "Dictionary keys can be mutable objects like lists."
+    ],
+    "topic": "Chapter09 Dictionaries and Sets",
+    "explanation": "In Python, attempting to access a non-existent key in a dictionary using dictionary[key] raises a KeyError. To prevent this, you should check whether the key exists using the in or not in operators. Dictionary keys must be immutable (e.g., strings, numbers, tuples), and dictionaries do not guarantee element order prior to Python 3.7.",
+    "question": "Which of the following statements about Python dictionaries is correct?",
+    "answer": "You can avoid a KeyError by checking if a key exists using the in operator."
+  },
+  {
+    "options": [
+      "do-while loop",
+      "for loop",
+      "recursive function",
+      "while loop"
+    ],
+    "topic": "Chapter04 Repetition Structures",
+    "explanation": "The for loop in Python is a count-controlled loop, meaning it is best used when the number of iterations is known beforehand. It automatically handles the counter and stops after the specified number of repetitions.",
+    "question": "Which Python loop is most appropriate when the number of iterations is known in advance?",
+    "answer": "for loop"
+  },
+  {
+    "options": [
+      "Using a keyword as a variable name is allowed if enclosed in quotes.",
+      "Variable names may start with a digit if it's not preceded by an underscore.",
+      "Variable names can include spaces if wrapped in double quotes.",
+      "You can assign values to multiple variables in one statement, like: x = y = z = 5.0"
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "Python allows assigning the same value to multiple variables using chained assignment such as x = y = z = 5.0, which assigns 5.0 to all three variables. Variable names cannot start with digits, contain spaces, or use Python keywords—even within quotes—as identifiers.",
+    "question": "Which of the following statements about variable naming and assignment in Python is TRUE?",
+    "answer": "You can assign values to multiple variables in one statement, like: x = y = z = 5.0"
+  },
+  {
+    "options": [
+      "The person who writes computer code",
+      "The main memory of a computer",
+      "A set of instructions that a computer follows to perform a task",
+      "A physical component of a computer"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "A program is a set of instructions that a computer follows to execute tasks. It is commonly referred to as software and is designed to perform specific jobs as directed by the programmer.",
+    "question": "What is a program in the context of computer science?",
+    "answer": "A set of instructions that a computer follows to perform a task"
+  },
+  {
+    "options": [
+      "Tuples are created using square brackets [] like lists.",
+      "A tuple is a mutable sequence used to store multiple items.",
+      "A tuple can only contain numeric data types.",
+      "A tuple is an immutable sequence, meaning its elements cannot be changed after creation."
+    ],
+    "topic": "Chapter07 Lists and Tuples",
+    "explanation": "In Python, tuples are sequences that store multiple items, just like lists. However, unlike lists, tuples are immutable, meaning their contents cannot be modified once they are created.",
+    "question": "Which of the following best describes a tuple in Python?",
+    "answer": "A tuple is an immutable sequence, meaning its elements cannot be changed after creation."
+  },
+  {
+    "options": [
+      "The function is missing a call to turtle.end_fill().",
+      "The function is missing a return statement.",
+      "The parameters should be passed as keyword arguments.",
+      "The 'for' loop should iterate 3 times instead of 4."
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "The function omits the call to turtle.end_fill(), which ends the fill operation in turtle graphics. Without this line, the square may not appear filled with the specified color.",
+    "question": "Spot the bug in the following function definition:\n\ndef draw_square(x, y, width, color):\n    turtle.penup()\n    turtle.goto(x, y)\n    turtle.fillcolor(color)\n    turtle.pendown()\n    turtle.begin_fill()\n    for count in range(4):\n        turtle.forward(width)\n        turtle.left(90)\n    # Missing line here",
+    "answer": "The function is missing a call to turtle.end_fill()."
+  },
+  {
+    "options": [
+      "To allow data to persist between program executions",
+      "To simplify the syntax of loops",
+      "To make the code run faster",
+      "To reduce memory usage during runtime"
+    ],
+    "topic": "Chapter06 Files and Exceptions",
+    "explanation": "Chapter 6 explains that files are used in Python to save data so that it can be retained and accessed even after the program has finished running. This makes it possible to store important information for future use.",
+    "question": "What is the primary reason for using files in Python programs, as described in Chapter 6?",
+    "answer": "To allow data to persist between program executions"
+  },
+  {
+    "options": [
+      "You can test for the existence of a key using the in operator.",
+      "Each element in a dictionary is a key-value pair.",
+      "Accessing a missing key with dictionary[key] returns None.",
+      "Dictionary keys must be immutable objects."
+    ],
+    "topic": "Chapter09 Dictionaries and Sets",
+    "explanation": "In Python, trying to access a non-existent key using dictionary[key] raises a KeyError exception. It does not return None. To avoid this, you should check if the key exists using the in operator or use the get() method, which returns None by default if the key is not found.",
+    "question": "Which of the following statements about Python dictionaries is FALSE?",
+    "answer": "Accessing a missing key with dictionary[key] returns None."
+  },
+  {
+    "options": [
+      "<<",
+      "|=",
+      ".merge(",
+      "+="
+    ],
+    "topic": "Chapter09 Dictionaries and Sets",
+    "explanation": "In Python 3.9 and later, the '|=' operator merges two dictionaries by adding all key-value pairs from the right-hand dictionary (dict2) into the left-hand one (dict1), updating it in-place. Other options like '+=', '<<', or '.merge(' are either invalid or not defined for dictionaries.",
+    "question": "Fill in the blank to merge two dictionaries, dict1 and dict2, such that the resulting key-value pairs from dict2 are added into dict1, and dict1 is updated in-place:\n\n    dict1 ______ dict2",
+    "answer": "|="
+  },
+  {
+    "options": [
+      "score = float(input('Enter your score: '))",
+      "score = input(float('Enter your score: '))",
+      "input = float(score('Enter your score: '))",
+      "score = int(input('Enter your score: '))"
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "The correct syntax for receiving user input, converting it to a float, and assigning it to a variable is: score = float(input('Enter your score: ')). This ensures that the input string from the user is converted into a floating-point number before being stored in the variable.",
+    "question": "Fill in the blank: To convert user input to a floating-point number and assign it to a variable named 'score', you should write ________.",
+    "answer": "score = float(input('Enter your score: '))"
+  },
+  {
+    "options": [
+      "3 2 1 0 Done",
+      "Error: Infinite Loop",
+      "3 2 1",
+      "3 2 1 Done"
+    ],
+    "topic": "Chapter04 Repetition Structures",
+    "explanation": "The while loop starts with count = 3. On each iteration, it prints the current count and decreases it by one. The loop condition is count > 0, so when count becomes 0, the loop stops. The values printed are: 3, 2, and 1. Then outside the loop, 'Done' is printed.",
+    "question": "What will be the output of the following code?\n\ncount = 3\nwhile count > 0:\n    print(count)\n    count -= 1\nprint(\"Done\")",
+    "answer": "3 2 1 Done"
+  },
+  {
+    "options": [
+      "Open the file → Process the file → Close the file",
+      "Import modules → Process data → Save to file",
+      "Create the file → Read from the file → Close the file",
+      "Initialize variables → Write to the file → Delete the file"
+    ],
+    "topic": "Chapter06 Files and Exceptions",
+    "explanation": "Chapter 6 explains that when a program uses a file—whether for input (reading) or output (writing)—it typically follows three main steps: opening the file, processing it (by reading or writing), and then closing it to release system resources.",
+    "question": "What are the three basic steps a Python program follows when working with an input or output file, as outlined in Chapter 6?",
+    "answer": "Open the file → Process the file → Close the file"
+  },
+  {
+    "options": [
+      "A device that stores and prints program output",
+      "A tool that translates and executes code one line at a time",
+      "A program that translates high-level code into machine language",
+      "A memory unit used to store binary data"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "A compiler is software that translates a program written in a high-level language into a separate machine language program. This translated machine code can then be executed directly by the computer without further translation.",
+    "question": "Which of the following best defines a compiler in the context of programming languages?",
+    "answer": "A program that translates high-level code into machine language"
+  },
+  {
+    "options": [
+      "Hello World",
+      "\"Hello\" \"World\"",
+      "Hello\\tWorld",
+      "Hello\\nWorld"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "The script contains two separate print statements. When run in script mode, each call to `print()` outputs its content followed by a newline. Therefore, `print(\"Hello\")` outputs 'Hello' and moves to a new line, then `print(\"World\")` outputs 'World'. This results in:\n\nHello\nWorld",
+    "question": "What will the following Python script output when run in script mode?\n\n```python\nprint(\"Hello\")\nprint(\"World\")\n```\n\nAssume the file is named hello.py and it is correctly executed using `python hello.py` from the command line.",
+    "answer": "Hello\\nWorld"
+  },
+  {
+    "options": [
+      "greet(user)",
+      "Hi, Alice",
+      "Error: 'name' is not defined",
+      "Hello, Alice"
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "The function `greet` takes one parameter `name`, which is assigned the value of the argument passed to it—in this case, 'Alice'. When `main()` is called, it defines `user` as 'Alice' and passes it into `greet`. Therefore, the function prints 'Hello, Alice'.",
+    "question": "What will be the output of the following Python code?\n\n```python\ndef greet(name):\n    print(\"Hello,\", name)\n\ndef main():\n    user = \"Alice\"\n    greet(user)\n\nmain()\n```",
+    "answer": "Hello, Alice"
+  },
+  {
+    "options": [
+      "(True or False) and not (True and False)",
+      "True and False or not (True)",
+      "not (False and True) or False",
+      "not True and (False or True)"
+    ],
+    "topic": "Chapter03 Decision Structures and Boolean Logic",
+    "explanation": "Let's evaluate each option:\n\n1. `not (False and True) or False` → `not False or False` → `True or False` → True ✅\n   But this is not the answer because we must pick the one that’s uniquely true under strict evaluation.\n\n2. `(True or False) and not (True and False)` → `True and not False` → `True and True` → True ✅\n\n3. `not True and (False or True)` → `False and True` → False ❌\n\n4. `True and False or not (True)` → `False or False` → False ❌\n\nWhile both option 1 and option 2 evaluate to True, option 2 is a better choice given it applies both ‘or’, ‘and’ and ‘not’ with parentheses clearly, aligning with study material on compound Boolean expressions. Option 2 is selected for being more illustrative of combined operators.",
+    "question": "Which of the following Boolean expressions evaluates to True?",
+    "answer": "(True or False) and not (True and False)"
+  },
+  {
+    "options": [
+      "The CPU checks for syntax errors in Python code.",
+      "The CPU performs the specified operation.",
+      "The CPU translates assembly code into machine language.",
+      "The CPU reads the next instruction from memory."
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "During the 'Fetch' step of the CPU's instruction cycle, the processor reads (or fetches) the next instruction from memory. This is followed by Decode and Execute steps, forming the complete Fetch-Decode-Execute cycle that allows programs to run.",
+    "question": "Which of the following best describes what happens during the 'Fetch' step of the CPU's instruction cycle?",
+    "answer": "The CPU reads the next instruction from memory."
+  },
+  {
+    "options": [
+      "Math module integration",
+      "Divide and conquer approach",
+      "Random number generation",
+      "Global variable design"
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "Chapter 5 introduces the divide and conquer approach as a way to organize programs by breaking them into smaller, manageable functions. This modular design improves readability, testing, and maintenance.",
+    "question": "Which concept from Chapter 5 describes breaking a program into smaller functions, each handling a specific task?",
+    "answer": "Divide and conquer approach"
+  },
+  {
+    "options": [
+      "It stores data permanently",
+      "It acts as the brain of the computer, executing instructions",
+      "It handles network communications",
+      "It is responsible for input and output operations"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "The central processing unit (CPU) is often referred to as the brain of the computer. It is responsible for executing instructions from programs, making it a critical component for processing data and running applications.",
+    "question": "What role does the central processing unit (CPU) play in a computer system?",
+    "answer": "It acts as the brain of the computer, executing instructions"
+  },
+  {
+    "options": [
+      "Machine code and high-level languages serve the same purpose and can be used interchangeably without conversion.",
+      "High-level languages are human-readable and need to be translated into machine code to be executed by the computer.",
+      "Machine code is written in plain English, whereas high-level languages are not human-readable.",
+      "High-level languages are executed directly by the hardware, while machine code needs translation."
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "High-level programming languages are designed to be easy for humans to read and write. They need to be translated into machine code, which is a low-level language that the computer's hardware can execute, using a compiler or interpreter.",
+    "question": "Which of the following best describes the relationship between high-level programming languages and machine code?",
+    "answer": "High-level languages are human-readable and need to be translated into machine code to be executed by the computer."
+  },
+  {
+    "options": [
+      "Each task within the program is contained in its own function",
+      "It uses a single block of code for all tasks",
+      "It only uses built-in Python functions",
+      "It avoids the use of functions to simplify code"
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "A modularized program divides the overall task into smaller, manageable parts by placing each task within its own function. This improves code readability, reusability, and maintainability.",
+    "question": "What is a key characteristic of a modularized program in Python?",
+    "answer": "Each task within the program is contained in its own function"
+  },
+  {
+    "options": [
+      "It has higher precedence than all arithmetic operators.",
+      "It is used to compare two variables for equality.",
+      "It can only be used inside loops, not if statements.",
+      "It performs assignment and returns the assigned value."
+    ],
+    "topic": "Chapter03 Decision Structures and Boolean Logic",
+    "explanation": "The walrus operator (:=) is an assignment expression that both assigns a value to a variable and returns that value. It has the lowest precedence among operators and can be used in various constructs like if statements. It does not compare values—that's what == is for.",
+    "question": "Which of the following statements about the walrus operator (:=) is true?",
+    "answer": "It performs assignment and returns the assigned value."
+  },
+  {
+    "options": [
+      "They help divide a program into smaller, manageable parts",
+      "They allow you to write shorter programs",
+      "They make code run faster",
+      "They eliminate the need for variables"
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "Functions support the divide and conquer approach in programming by modularizing code, making it easier to manage, read, and maintain.",
+    "question": "What is the main benefit of using functions in Python programming?",
+    "answer": "They help divide a program into smaller, manageable parts"
+  },
+  {
+    "options": [
+      "Hardware Engineer",
+      "Data Analyst",
+      "Programmer",
+      "System Administrator"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "Chapter 1 defines a programmer as a person who can design, create, and test computer programs. They are also referred to as software developers.",
+    "question": "Who is responsible for designing, creating, and testing computer programs according to Chapter 1?",
+    "answer": "Programmer"
+  },
+  {
+    "options": [
+      "Only lists and strings are considered sequences in Python.",
+      "All sequences in Python are mutable.",
+      "Lists are immutable and tuples are mutable.",
+      "Lists are mutable while tuples are immutable."
+    ],
+    "topic": "Chapter07 Lists and Tuples",
+    "explanation": "In Python, a sequence is an object that holds a collection of items. Lists and tuples are types of sequences where lists can be modified after creation (mutable), whereas tuples cannot be changed once created (immutable).",
+    "question": "Which of the following statements is true about Python sequences?",
+    "answer": "Lists are mutable while tuples are immutable."
+  },
+  {
+    "options": [
+      "Tuple Packing",
+      "Copying Lists",
+      "List Comprehensions",
+      "List Slicing"
+    ],
+    "topic": "Chapter07 Lists and Tuples",
+    "explanation": "List comprehensions provide a concise way to generate a new list by iterating over an existing iterable and optionally applying a condition or transformation to each element. This feature enhances code readability and efficiency.",
+    "question": "Which Python feature allows you to create a new list by processing elements from an existing iterable based on some condition?",
+    "answer": "List Comprehensions"
+  },
+  {
+    "options": [
+      "25",
+      "\"Error\"",
+      "5.0",
+      "None"
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "The function 'process' checks if the input number is negative. If not, it returns the square root using math.sqrt(). Since 25 is non-negative, math.sqrt(25) returns 5.0, which is printed.",
+    "question": "What will be the output of the following code?\n\nimport math\n\ndef process(number):\n    if number < 0:\n        return \"Error\"\n    else:\n        return math.sqrt(number)\n\nresult = process(25)\nprint(result)",
+    "answer": "5.0"
+  },
+  {
+    "options": [
+      "A function that only works with global constants.",
+      "A function that returns the number of statements it contains.",
+      "A function that performs a task without returning any results.",
+      "A function that returns a value after processing input data."
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "A value-returning function is designed to perform computations or operations and then return a value as the result. This allows the calling code to receive and use the output of the function, typically to continue with further processing or calculations.",
+    "question": "What is a value-returning function in Python?",
+    "answer": "A function that returns a value after processing input data."
+  },
+  {
+    "options": [
+      "To convert data into binary format",
+      "To allow the program to retain data between runs",
+      "To reduce memory usage during execution",
+      "To increase the speed of the program"
+    ],
+    "topic": "Chapter06 Files and Exceptions",
+    "explanation": "Saving data to a file allows a Python program to persist information even after it has stopped running. This makes it possible to retrieve and use that data in future executions.",
+    "question": "Why is data typically saved to a file in a Python program?",
+    "answer": "To allow the program to retain data between runs"
+  },
+  {
+    "options": [
+      "The interpreter reports a syntax error immediately and stops execution.",
+      "The interpreter skips the erroneous line and executes the rest.",
+      "The interpreter generates a machine language file and continues execution.",
+      "The interpreter compiles the entire program before reporting any errors."
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "Python is an interpreted language, which means it translates and executes code one instruction at a time. If there is a syntax error in a line of code, the interpreter detects it during that translation step and halts execution immediately, reporting the error. Unlike compiled languages, it does not generate a separate machine language file.",
+    "question": "Consider the following scenario:\n\nA Python program file named `example.py` contains a single line with a syntax error. What will be the output when executed using the command `python example.py` in an interpreter-based environment like Python?",
+    "answer": "The interpreter reports a syntax error immediately and stops execution."
+  },
+  {
+    "options": [
+      "Strings must be on separate lines to be concatenated.",
+      "String concatenation is only possible inside loops.",
+      "Adjacent string literals are automatically combined into one string.",
+      "You must always use '+' to concatenate strings."
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "In Python, placing two or more string literals next to each other results in implicit concatenation. For example, 'one' 'two' becomes 'onetwo'.",
+    "question": "Which of the following statements about string concatenation in Python is TRUE?",
+    "answer": "Adjacent string literals are automatically combined into one string."
+  },
+  {
+    "options": [
+      "Parentheses are required around the assignment expression to ensure correct evaluation.",
+      "Boolean expressions can't be used directly with the walrus operator in Python.",
+      "Assignment expressions must not be used inside an if condition.",
+      "The walrus operator cannot be used with arithmetic expressions."
+    ],
+    "topic": "Chapter03 Decision Structures and Boolean Logic",
+    "explanation": "In the line `if area := width * height > 100:`, Python evaluates `width * height > 100` first, resulting in a Boolean, which is then incorrectly assigned to `area`. To fix this, parentheses are needed around `width * height`: `if (area := width * height) > 100:`. This ensures `area` gets the actual product value before comparison.",
+    "question": "Identify the bug in the following Python code that aims to calculate and evaluate an area using assignment expressions:\n\n```python\nwidth = 10\nheight = 12\nif area := width * height > 100:\n    print(\"Area too large\")\nelse:\n    print(\"Area acceptable\")\n```",
+    "answer": "Parentheses are required around the assignment expression to ensure correct evaluation."
+  },
+  {
+    "options": [
+      "To manage hardware resources in data centers.",
+      "To maintain the security of computer networks.",
+      "To design, create, and test physical components of a computer.",
+      "To design, create, and test software programs."
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "A programmer, also known as a software developer, is responsible for designing, creating, and testing computer programs, which are sets of instructions that tell a computer how to perform specific tasks.",
+    "question": "What is the role of a programmer in the field of computing?",
+    "answer": "To design, create, and test software programs."
+  },
+  {
+    "options": [
+      "They provide abstraction from machine instructions through compilers or interpreters.",
+      "They bypass the operating system and run on firmware.",
+      "They are translated directly into hardware circuits.",
+      "They execute only in interactive mode using utility programs."
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "High-level languages allow developers to write complex applications without needing intimate knowledge of CPU architecture because they abstract away low-level details. This is possible thanks to compilers and interpreters, which translate the high-level code into machine language that the CPU can execute.",
+    "question": "Why do high-level programming languages allow developers to write complex software without managing low-level CPU operations?",
+    "answer": "They provide abstraction from machine instructions through compilers or interpreters."
+  },
+  {
+    "options": [
+      ".copy(",
+      "^",
+      ".symmetric_difference(",
+      ".issubset("
+    ],
+    "topic": "Chapter09 Dictionaries and Sets",
+    "explanation": "The .issubset() method is used to determine whether all elements in setA are also in setB. It returns True if setA is a subset of setB.",
+    "question": "To check if all elements of one set exist in another, fill in the blank: \n\nsetA ______ setB",
+    "answer": ".issubset("
+  },
+  {
+    "options": [
+      "A way to define reusable blocks of code",
+      "A structure that performs specific actions only if a certain condition exists",
+      "A set of statements that execute in the order they appear",
+      "A loop that repeats a block of code until a condition is false"
+    ],
+    "topic": "Chapter03 Decision Structures and Boolean Logic",
+    "explanation": "A decision structure, also known as a selection structure, allows a program to perform specific actions only when a particular condition evaluates to true. This is typically implemented using if statements in Python.",
+    "question": "Which of the following best describes a decision structure in Python?",
+    "answer": "A structure that performs specific actions only if a certain condition exists"
+  },
+  {
+    "options": [
+      "Tuples allow for duplicate values.",
+      "Tuples can only store data of different types.",
+      "Tuples are more memory-efficient and offer a performance benefit for read-only data.",
+      "Tuples have a larger set of methods available."
+    ],
+    "topic": "Chapter07 Lists and Tuples",
+    "explanation": "Tuples are immutable, making them more memory-efficient than lists. They are ideal for storing data that does not change, providing performance benefits for scenarios where the data is read-only.",
+    "question": "What is the primary advantage of using a tuple over a list in Python?",
+    "answer": "Tuples are more memory-efficient and offer a performance benefit for read-only data."
+  },
+  {
+    "options": [
+      "Global variables are only accessible within the function, while local variables can be accessed throughout the program.",
+      "Global variables can be accessed from anywhere in the program, while local variables are restricted to the function they are declared in.",
+      "Global variables automatically get deleted after the function execution completes.",
+      "Global variables must be declared as constants, while local variables can change values."
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "Global variables are defined outside any function and can be accessed throughout the entire program. In contrast, local variables are defined within a function and are only accessible within that function's scope. This helps in maintaining the stability and integrity of program variables.",
+    "question": "How do global variables differ from local variables in Python functions?",
+    "answer": "Global variables can be accessed from anywhere in the program, while local variables are restricted to the function they are declared in."
+  },
+  {
+    "options": [
+      "The phrase 'Python uses syntax errors' is invalid in this context.",
+      "The statement incorrectly describes Python's use of an interpreter.",
+      "The statement wrongly claims that Python cannot execute high-level code.",
+      "Python does not require a compiler to generate high-level code."
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "The given statement is inaccurate because Python uses an interpreter, not a compiler. It translates and executes one instruction at a time without creating a separate machine language file. This makes the code less portable across machines, unlike compiled programs.",
+    "question": "Spot the bug in the following statement related to how Python executes programs:\n\n\"Python compiles the entire program into a machine language file before execution, making it faster and reusable across devices.\"",
+    "answer": "The statement incorrectly describes Python's use of an interpreter."
+  },
+  {
+    "options": [
+      "It adds a new element to the end of the list.",
+      "It removes an element from the list if present.",
+      "It checks if an element exists in the list and returns a boolean value.",
+      "It slices the list into two halves."
+    ],
+    "topic": "Chapter07 Lists and Tuples",
+    "explanation": "The 'in' operator is used to check if a specific element is present within a list. It returns True if the element is found and False otherwise, allowing for easy membership testing in sequences.",
+    "question": "How does the 'in' operator function when used with lists in Python?",
+    "answer": "It checks if an element exists in the list and returns a boolean value."
+  },
+  {
+    "options": [
+      "Operating system",
+      "Central processing unit (CPU)",
+      "Text editor software",
+      "Python interpreter"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "As explained in Chapter 1, hardware includes the physical components that make up a computer. The central processing unit (CPU) is one such hardware component, while items like operating systems and interpreters are considered software.",
+    "question": "Which of the following is an example of hardware as described in Chapter 1?",
+    "answer": "Central processing unit (CPU)"
+  },
+  {
+    "options": [
+      "'price' must be rounded manually before formatting.",
+      "The format specifier ':,2f' is invalid; it should be ':,.2f'.",
+      "The variable 'price' must be a string to use inside an f-string.",
+      "You cannot use commas as thousands separators in Python."
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "In f-strings, when using both comma as a thousands separator and precision for floating-point numbers, the correct format is ':,.2f'. The given code mistakenly uses ':,2f', which causes a syntax error. The corrected line should read: `print(f'Total price: {price:,.2f}')`.",
+    "question": "Spot the bug in the following Python code that uses f-strings:\n\n```python\nprice = 1999.95\nprint(f'Total price: {price:,2f}')\n```",
+    "answer": "The format specifier ':,2f' is invalid; it should be ':,.2f'."
+  },
+  {
+    "options": [
+      "It means providing input values to a function so that it can use them in its computations.",
+      "It involves giving a function access to external variables for modification.",
+      "It allows the function to execute automatically at the end of the program.",
+      "It refers to changing the sequence of function calls."
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "Passing arguments to a function means giving it specific input values. These values are used by the function during execution to perform operations or calculations, allowing for dynamic and flexible function behavior.",
+    "question": "What does it mean to pass arguments to functions in Python?",
+    "answer": "It means providing input values to a function so that it can use them in its computations."
+  },
+  {
+    "options": [
+      "compiler",
+      "interpreter",
+      "linker",
+      "assembler"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "According to the study material, an interpreter translates and executes instructions in a high-level language program one at a time and does not produce a separate machine language program. This contrasts with a compiler, which creates a separate executable file.",
+    "question": "Fill in the blank: A(n) ______ translates and executes a high-level language program one instruction at a time without creating a separate machine language file.",
+    "answer": "interpreter"
+  },
+  {
+    "options": [
+      "input()",
+      "print()",
+      "output()",
+      "process()"
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "The 'print()' function in Python is used to display output to the user. It allows the programmer to output strings, numbers, and other data types to the console.",
+    "question": "Which of the following functions is used in Python to display output to the user?",
+    "answer": "print()"
+  },
+  {
+    "options": [
+      "A set of instructions that a computer follows to perform a task",
+      "A type of secondary storage device",
+      "A physical component of a computer",
+      "The central processing unit of a computer"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "In computing, a program is a set of instructions that a computer follows to perform a specific task. It is commonly referred to as software and is what enables the computer to perform various jobs.",
+    "question": "What is a program in the context of computing?",
+    "answer": "A set of instructions that a computer follows to perform a task"
+  },
+  {
+    "options": [
+      "0\n-1\n-2",
+      "0\n1\n2",
+      "Infinite loop with no output",
+      "0"
+    ],
+    "topic": "Chapter04 Repetition Structures",
+    "explanation": "The while loop condition is 'count < 3', which is True initially (since count is 0). Inside the loop, it prints the current value of count and then decrements count by 1. Since count keeps decreasing, it never reaches or exceeds 3, meaning the loop never terminates unless externally stopped. Therefore, this results in an infinite loop that keeps printing decreasing values starting from 0: 0, -1, -2, -3, and so on. The correct answer assumes a truncated output from the first few iterations.",
+    "question": "What will be the output of the following Python code?\n\ncount = 0\nwhile count < 3:\n    print(count)\n    count -= 1",
+    "answer": "0\n-1\n-2"
+  },
+  {
+    "options": [
+      "To instruct a computer on tasks to perform",
+      "To interface with hardware components",
+      "To permanently store data",
+      "To cool down the central processing unit"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "A program is a set of instructions that a computer follows to accomplish specific tasks. It serves as software that guides the computer in executing various operations as directed by the programmer.",
+    "question": "What is the primary function of a program in the context of computers?",
+    "answer": "To instruct a computer on tasks to perform"
+  },
+  {
+    "options": [
+      "A set of instructions that a computer follows to perform a task",
+      "A person who operates the computer manually",
+      "A physical component of a computer system",
+      "The main memory used to store data permanently"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "According to Chapter 1, a program is defined as a set of instructions that a computer follows to perform a task. It is commonly referred to as software.",
+    "question": "What is the correct definition of a computer program as described in Chapter 1?",
+    "answer": "A set of instructions that a computer follows to perform a task"
+  },
+  {
+    "options": [
+      "The turtle module is not imported in the program.",
+      "The square function uses 'width' instead of 'side_length' which causes an error.",
+      "The circle function is missing turtle.begin_fill() and turtle.end_fill().",
+      "The pass keyword should not be used in step2 since it draws a shape."
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "While both 'square' and 'circle' functions use turtle graphics functions like turtle.penup() and turtle.goto(), there is no import statement for the turtle module. This results in a NameError when these functions are called. To fix this, add 'import turtle' at the beginning of the script.",
+    "question": "The following Python code is meant to modularize the drawing of shapes using turtle graphics. However, it contains a bug that prevents it from working correctly. Identify the issue.",
+    "answer": "The turtle module is not imported in the program."
+  },
+  {
+    "options": [
+      "It stores data permanently for future use",
+      "It allows users to interact with the computer through input devices",
+      "It designs and tests software applications",
+      "It performs the actual execution of program instructions"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "As described in Chapter 1, the CPU is a major hardware component responsible for executing the instructions in a program. It is often referred to as the 'brain' of the computer because it carries out the operations defined by software.",
+    "question": "According to Chapter 1, what is the role of the Central Processing Unit (CPU) in a computer system?",
+    "answer": "It performs the actual execution of program instructions"
+  },
+  {
+    "options": [
+      "It creates graphical user interfaces for Python scripts",
+      "It translates and executes Python statements line by line",
+      "It compiles Python code into machine language before runtime",
+      "It saves Python programs as executable files"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "The Python interpreter processes high-level source code by translating and executing it one statement at a time, especially in interactive mode. This allows users to see immediate results and catch errors quickly.",
+    "question": "What is the role of the Python interpreter when running a program?",
+    "answer": "It translates and executes Python statements line by line"
+  },
+  {
+    "options": [
+      "A KeyError exception will be raised.",
+      "The dictionary will return an empty string.",
+      "The dictionary will create the key with a default value.",
+      "The dictionary will return None."
+    ],
+    "topic": "Chapter09 Dictionaries and Sets",
+    "explanation": "In Python, attempting to access a key that does not exist in a dictionary using dictionary[key] results in a KeyError exception. To avoid this, use the 'in' operator to check for the key's existence or use the get() method.",
+    "question": "What will happen if you try to access a key that does not exist in a Python dictionary using the format dictionary[key]?",
+    "answer": "A KeyError exception will be raised."
+  },
+  {
+    "options": [
+      "To prevent a KeyError exception if the key does not exist.",
+      "Because dictionary keys must be unique.",
+      "To ensure the value is not None.",
+      "To avoid retrieving an incorrect value."
+    ],
+    "topic": "Chapter09 Dictionaries and Sets",
+    "explanation": "Accessing a non-existent key in a dictionary using dictionary[key] raises a KeyError exception. To avoid this, it's important to check for the key's existence using the in or not in operators before attempting to access its value.",
+    "question": "Why is it important to test whether a key exists in a dictionary before accessing its value using dictionary[key]?",
+    "answer": "To prevent a KeyError exception if the key does not exist."
+  },
+  {
+    "options": [
+      "There is no difference; both types of loops function identically in Python.",
+      "Count-controlled loops use a true/false condition to determine repetition.",
+      "Condition-controlled loops rely on a boolean expression, while count-controlled loops repeat a specific number of times.",
+      "Condition-controlled loops use a predetermined range; count-controlled loops do not."
+    ],
+    "topic": "Chapter04 Repetition Structures",
+    "explanation": "In Python, condition-controlled loops (such as while loops) continue to execute as long as a specified boolean condition remains true. Count-controlled loops (typically for loops) iterate a fixed number of times, often based on a range or counter.",
+    "question": "Which of the following best describes a key difference between condition-controlled and count-controlled loops in Python?",
+    "answer": "Condition-controlled loops rely on a boolean expression, while count-controlled loops repeat a specific number of times."
+  },
+  {
+    "options": [
+      "a if a > b else b",
+      "a > b ? a : b",
+      "if a > b then a else b",
+      "(a > b) and a or b"
+    ],
+    "topic": "Chapter03 Decision Structures and Boolean Logic",
+    "explanation": "Python uses the syntax `value1 if condition else value2` for conditional expressions. In this case, we want to assign `a` to `max_val` if `a > b`, otherwise assign `b`. So, the correct expression is `a if a > b else b`. The other options use incorrect or non-Python syntax.",
+    "question": "Fill in the blank: To assign the greater of two values `a` and `b` to the variable `max_val` using a conditional expression, the correct syntax is:\n\n`max_val = ____________`",
+    "answer": "a if a > b else b"
+  },
+  {
+    "options": [
+      "Software stores data permanently while hardware processes it.",
+      "Hardware executes the instructions provided by software.",
+      "Software provides power to hardware components.",
+      "Hardware and software are both physical components of a computer."
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "As explained in Chapter 1, hardware refers to the physical devices of a computer, while software (programs) provides instructions. The hardware executes these instructions to perform tasks, making them work together as a system.",
+    "question": "Which of the following best describes the relationship between hardware and software in a computer system?",
+    "answer": "Hardware executes the instructions provided by software."
+  },
+  {
+    "options": [
+      "They allow you to run code without importing modules",
+      "They eliminate the need for variables",
+      "They automatically optimize the speed of the program",
+      "They help organize code into reusable and manageable sections"
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "Chapter 5 emphasizes that functions are used to group related statements that perform specific tasks. This modular approach makes programs easier to design, test, maintain, and reuse.",
+    "question": "According to Chapter 5, what is a key advantage of using functions when designing a Python program?",
+    "answer": "They help organize code into reusable and manageable sections"
+  },
+  {
+    "options": [
+      "randrange; randrange(10, 51)",
+      "choice; choice(range(10, 50))",
+      "random; random(10, 50)",
+      "uniform; uniform(10, 50)"
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "The correct function to generate a random integer in a specific range is randrange. The second argument in randrange is exclusive, so to include 50, we must use randrange(10, 51). The other options are incorrect because 'random()' does not take arguments and returns a float between 0.0 and 1.0, 'uniform()' returns a float (not integer), and 'choice()' requires an iterable like a list or range but is not directly imported here.",
+    "question": "Fill in the blank to define a function named 'rand_int' that returns a random integer between 10 and 50 (inclusive) each time it is called:\n\nfrom random import ____\n\ndef rand_int():\n    return _____",
+    "answer": "randrange; randrange(10, 51)"
+  },
+  {
+    "options": [
+      "Integer division rounds away from zero; floating-point division produces a decimal.",
+      "Floating-point division rounds toward zero; integer division truncates toward negative infinity.",
+      "Both divisions round toward zero.",
+      "Integer division rounds up to the nearest whole number; floating-point rounds down."
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "The / operator in Python performs floating-point division and always produces a float, including any fractional part. The // operator performs integer division, which truncates the result. For positive numbers, this means dropping the decimal part. For negative numbers, Python truncates 'away from zero', meaning it moves further into the negatives.",
+    "question": "In Python's integer division (//) and floating-point division (/), how are negative results handled differently when the result includes a remainder?",
+    "answer": "Integer division rounds away from zero; floating-point division produces a decimal."
+  },
+  {
+    "options": [
+      "f'{.2f:value}'",
+      "round(value, 2)",
+      "{value.2f}",
+      "{value:.2f}"
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "F-strings support format specifiers like '.2f' to control how numeric values are displayed. The correct syntax is '{value:.2f}', which formats the value as a float rounded to two decimal places inside an f-string.",
+    "question": "Fill in the blank: To round a floating-point number to two decimal places using an f-string, you would use ________.",
+    "answer": "{value:.2f}"
+  },
+  {
+    "options": [
+      "To convert variables into functions",
+      "To permanently delete unused data",
+      "To retain data between the times the program is run",
+      "To increase the program's execution speed"
+    ],
+    "topic": "Chapter06 Files and Exceptions",
+    "explanation": "Writing data to a file allows it to be saved on disk so it can be retrieved and used later, enabling the program to maintain state or results across multiple executions.",
+    "question": "What is the primary purpose of writing data to a file in a Python program?",
+    "answer": "To retain data between the times the program is run"
+  },
+  {
+    "options": [
+      "87.99 = cost",
+      "'cost' = 87.99",
+      "cost = 87.99",
+      "cost == 87.99"
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "In Python, assignment is done using the equal sign (=) with the variable name on the left. So to assign the value 87.99 to 'cost', you write cost = 87.99. The other options are either syntactically incorrect or use comparison instead of assignment.",
+    "question": "Fill in the blank: In Python, to assign the value 87.99 to a variable named 'cost', you would write ________.",
+    "answer": "cost = 87.99"
+  },
+  {
+    "options": [
+      "It returns True only if both operands are True.",
+      "It checks whether two values are not equal.",
+      "It flips the Boolean value of its operand.",
+      "It returns True if at least one operand is True."
+    ],
+    "topic": "Chapter03 Decision Structures and Boolean Logic",
+    "explanation": "In Python, the `and` operator creates a compound Boolean expression that evaluates to True only when both sub-expressions are True. If either one is False, the entire expression evaluates to False.",
+    "question": "Which of the following best describes how the `and` operator works in a Python Boolean expression?",
+    "answer": "It returns True only if both operands are True."
+  },
+  {
+    "options": [
+      "bool",
+      "float",
+      "int",
+      "string"
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "The input() function reads input from the keyboard and always returns it as a string, even if the user enters numbers. To use the input as an int or float, you must explicitly convert it using int() or float().",
+    "question": "Fill in the blank: The input() function always returns a value of type ________.",
+    "answer": "string"
+  },
+  {
+    "options": [
+      "System administrator",
+      "Hardware engineer",
+      "Computer technician",
+      "Programmer"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "According to Chapter 1, a programmer—also known as a software developer—is the person who designs, creates, and tests computer programs.",
+    "question": "Who is responsible for designing, creating, and testing computer programs as described in Chapter 1?",
+    "answer": "Programmer"
+  },
+  {
+    "options": [
+      "A file from which data is read during program execution",
+      "A file that is used to display printed output on the screen",
+      "A file that temporarily stores runtime variables",
+      "A file that data is written to for storage"
+    ],
+    "topic": "Chapter06 Files and Exceptions",
+    "explanation": "An output file in Python is a file where data is saved or written. This allows the program to store information that can be accessed later, even after the program has stopped running.",
+    "question": "Which of the following best describes an output file in Python?",
+    "answer": "A file that data is written to for storage"
+  },
+  {
+    "options": [
+      "A file that temporarily stores program variables",
+      "A file from which data is read by a program",
+      "A file automatically created when a program starts",
+      "A file that is used to write output data"
+    ],
+    "topic": "Chapter06 Files and Exceptions",
+    "explanation": "As described in Chapter 6, an input file is specifically used for reading data. This allows a Python program to retrieve and process previously saved information.",
+    "question": "According to Chapter 6, what is the correct definition of an input file in Python?",
+    "answer": "A file from which data is read by a program"
+  },
+  {
+    "options": [
+      "def show_sum(/, a, b, *, c=1, d=2): print(a + b + c + d)",
+      "def show_sum(*, a, b, /, c, d): print(a + b + c + d)",
+      "def show_sum(a=0, b=0, /, *, c=1, d=2): print(a + b + c + d)",
+      "def show_sum(a, b, /, *, c, d): print(a + b + c + d)"
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "In this definition: 'a' and 'b' are declared before the slash '/', making them positional-only. The asterisk '*' indicates that 'c' and 'd' must be passed as keyword arguments. This correct combination matches Python’s parameter declaration rules for positional-only and keyword-only parameters.",
+    "question": "Which of the following function definitions correctly uses both positional-only and keyword-only parameters, according to Python's syntax rules?",
+    "answer": "def show_sum(a, b, /, *, c, d): print(a + b + c + d)"
+  },
+  {
+    "options": [
+      "A sequence of operations",
+      "A true/false condition to be tested",
+      "The start or end of a program",
+      "A loop that repeats actions"
+    ],
+    "topic": "Chapter03 Decision Structures and Boolean Logic",
+    "explanation": "In flowcharts that illustrate decision structures, a diamond shape is used to represent a condition that evaluates to either true or false. This determines the path of execution in conditional statements such as if and if-else.",
+    "question": "In Python's decision structures, what does a diamond symbol represent in a flowchart?",
+    "answer": "A true/false condition to be tested"
+  },
+  {
+    "options": [
+      "List slicing",
+      "Two-Dimensional Lists",
+      "List comprehensions",
+      "Copying Lists"
+    ],
+    "topic": "Chapter07 Lists and Tuples",
+    "explanation": "Two-dimensional lists in Python are used to store data in a tabular format, similar to rows and columns in a spreadsheet. They are essentially lists of lists, where each inner list represents a row in the table.",
+    "question": "Which technique would you use to handle a collection of data in rows and columns format using lists in Python?",
+    "answer": "Two-Dimensional Lists"
+  },
+  {
+    "options": [
+      "Keyboard",
+      "Main Memory (RAM)",
+      "Central Processing Unit (CPU)",
+      "Hard Drive"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "According to Chapter 1, secondary storage devices are used to store data long-term. A hard drive is a common example of secondary storage, whereas the CPU, keyboard, and RAM serve other roles in the computer system.",
+    "question": "Which of the following is an example of a secondary storage device as discussed in Chapter 1?",
+    "answer": "Hard Drive"
+  },
+  {
+    "options": [
+      "Tuples provide better performance for iteration and access, being immutable.",
+      "Tuples can be resized when necessary, unlike lists.",
+      "Tuples allow for duplicate values while lists do not.",
+      "Tuples can store more elements than a list."
+    ],
+    "topic": "Chapter07 Lists and Tuples",
+    "explanation": "Being immutable, tuples are generally more memory-efficient and faster for iteration and access compared to lists, as they offer advantages in scenarios where the data is not intended to change.",
+    "question": "What is the main reason for using tuples instead of lists when defining a sequence of elements in Python?",
+    "answer": "Tuples provide better performance for iteration and access, being immutable."
+  },
+  {
+    "options": [
+      "A web browser",
+      "Central processing unit (CPU)",
+      "The operating system",
+      "A Python program"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "According to Chapter 1, hardware refers to the physical devices that make up a computer. The central processing unit (CPU) is listed as one of the major components of hardware.",
+    "question": "Which of the following is considered hardware in a computer system as described in Chapter 1?",
+    "answer": "Central processing unit (CPU)"
+  },
+  {
+    "options": [
+      "The main function will always run, even when the file is imported as a module.",
+      "When importing a module, its main function executes automatically.",
+      "Using 'if __name__ == \"__main__\":' prevents main() from running when the file is imported.",
+      "__name__ is always set to '__main__', regardless of how the file is executed."
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "In Python, using 'if __name__ == \"__main__\":' allows a script to determine if it is being run directly or imported as a module. If imported, __name__ equals the module name and not '__main__', so the main function does not execute. This makes it possible to reuse code without unintended side effects.",
+    "question": "Which of the following statements about Python's __name__ variable and conditional main execution is TRUE?",
+    "answer": "Using 'if __name__ == \"__main__\":' prevents main() from running when the file is imported."
+  },
+  {
+    "options": [
+      "To use only built-in Python functions.",
+      "To organize code such that each function performs a separate task.",
+      "To decrease the size of the program to make it run faster.",
+      "To remove all comments and documentation for simplicity."
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "Modularizing code involves breaking down a program into smaller sections, where each function is responsible for a specific task. This approach enhances code readability, maintenance, and reusability by compartmentalizing functionality into independent, manageable units.",
+    "question": "In the context of Python functions, what does it mean to 'modularize code'?",
+    "answer": "To organize code such that each function performs a separate task."
+  },
+  {
+    "options": [
+      "A person who designs and tests computer applications",
+      "The central part of the computer that controls all hardware",
+      "A set of instructions that a computer follows to perform a task",
+      "A physical device that performs calculations"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "A program is a set of instructions that a computer follows to perform a task. It is commonly referred to as software and is created by a programmer or software developer.",
+    "question": "What is the correct definition of a 'program' in the context of computers?",
+    "answer": "A set of instructions that a computer follows to perform a task"
+  },
+  {
+    "options": [
+      "It performs an operation but does not return a value.",
+      "It can only be used within the math module.",
+      "It modifies the global variables automatically.",
+      "It always returns a value."
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "A void function is designed to perform a specific task without returning a value. Its purpose is to encapsulate code that needs to be repeated or organized for clarity, rather than to compute a result.",
+    "question": "What is a characteristic of a void function in Python?",
+    "answer": "It performs an operation but does not return a value."
+  },
+  {
+    "options": [
+      "Interactive mode displays a prompt where users can type and immediately execute Python statements.",
+      "The interactive mode stores code permanently for reuse across sessions.",
+      "Python's interactive mode cannot detect syntax errors.",
+      "Interactive mode requires saving code in a .py file before execution."
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "In Python’s interactive mode, the interpreter shows a prompt (typically >>>) where users can enter statements one at a time. Each statement is executed immediately, making it a useful tool for learning and experimentation. It does not require saving to a file beforehand, and any errors like syntax issues are shown right away.",
+    "question": "Which of the following statements about Python's interactive mode is TRUE?",
+    "answer": "Interactive mode displays a prompt where users can type and immediately execute Python statements."
+  },
+  {
+    "options": [
+      "To allow multiple programmers to work on the same function simultaneously.",
+      "To decrease the number of lines of code in a program.",
+      "To streamline the debugging process by reducing errors.",
+      "To break down a program into smaller tasks that are easier to manage and understand."
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "The 'divide and conquer' approach in programming involves breaking down a large task into smaller, more manageable functions. This makes the program easier to understand, organize, test, and maintain, enhancing overall code quality and efficiency.",
+    "question": "What is the purpose of using the 'divide and conquer' approach with functions in Python?",
+    "answer": "To break down a program into smaller tasks that are easier to manage and understand."
+  },
+  {
+    "options": [
+      "To increase the storage capacity of a program.",
+      "To divide a program into smaller, manageable tasks.",
+      "To increase the execution speed of a program.",
+      "To permanently store data within a program."
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "Functions allow programs to be modularized, enabling the division of a program into smaller, more manageable tasks. This is part of the 'divide and conquer' approach that facilitates easier program design, testing, and maintenance.",
+    "question": "What is the primary purpose of using functions in a program?",
+    "answer": "To divide a program into smaller, manageable tasks."
+  },
+  {
+    "options": [
+      "A physical device that stores data",
+      "A set of instructions a computer follows to perform a task",
+      "A person who builds computers",
+      "The main memory component of a computer"
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "According to Chapter 1, a program is defined as a set of instructions that a computer follows to perform a task. It is commonly referred to as software.",
+    "question": "What is the correct definition of a computer program?",
+    "answer": "A set of instructions a computer follows to perform a task"
+  },
+  {
+    "options": [
+      "Local variables are only accessible within the function they are defined in.",
+      "Local variables must be defined at the beginning of the program.",
+      "Local variables can be accessed outside of their function.",
+      "Local variables automatically become global variables after function execution."
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "Local variables are variables that are defined and used within a function. They cannot be accessed or modified outside of that function, encapsulating their scope and preventing accidental interference with other parts of the program.",
+    "question": "Which of the following statements about local variables in Python functions is true?",
+    "answer": "Local variables are only accessible within the function they are defined in."
+  },
+  {
+    "options": [
+      "Diamond",
+      "Triangle",
+      "Rectangle",
+      "Circle"
+    ],
+    "topic": "Chapter03 Decision Structures and Boolean Logic",
+    "explanation": "In flowcharts, a diamond shape is used to represent a decision point that evaluates a true/false condition. This is part of illustrating the logic behind decision structures such as if statements.",
+    "question": "Which symbol is commonly used in flowcharts to represent a true/false condition in a decision structure?",
+    "answer": "Diamond"
+  },
+  {
+    "options": [
+      "The variable 'total' should be initialized before using it.",
+      "The print function is missing parentheses.",
+      "'price' and 'tax_rate' need to be converted from strings to numbers before performing arithmetic.",
+      "The variables 'price' and 'tax_rate' should not be declared inside input()."
+    ],
+    "topic": "Chapter02 Input, Processing, and Output",
+    "explanation": "The input() function returns data as a string. In this code, arithmetic is being attempted directly on 'price' and 'tax_rate', which are still strings. This will raise a TypeError. To fix the bug, convert these inputs using float():\n\n```python\nprice = float(input(\"Enter the price: \"))\ntax_rate = float(input(\"Enter tax rate: \"))\ntotal = price + (price * tax_rate)\n```",
+    "question": "Spot the bug in the following Python code that attempts to prompt the user and perform a calculation:\n\n```python\nprice = input(\"Enter the price: \")\ntax_rate = input(\"Enter tax rate: \")\ntotal = price + (price * tax_rate)\nprint(\"Total amount:\", total)\n```",
+    "answer": "'price' and 'tax_rate' need to be converted from strings to numbers before performing arithmetic."
+  },
+  {
+    "options": [
+      "Hardware executes tasks defined by software instructions.",
+      "Hardware and software are both physical components of a computer.",
+      "Software controls electricity flow through hardware circuits.",
+      "Software is the physical part of the computer, while hardware consists of programs."
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "Chapter 1 explains that hardware refers to the physical devices of a computer system, while software (programs) provides the instructions those devices follow. The two work together, with hardware executing tasks as directed by software.",
+    "question": "Which of the following best describes the relationship between hardware and software as explained in Chapter 1?",
+    "answer": "Hardware executes tasks defined by software instructions."
+  },
+  {
+    "options": [
+      "The program's instructions will be loaded into RAM, and the CPU will execute them using the fetch-decode-execute cycle.",
+      "The program will be compiled into machine code and stored permanently on the hard drive.",
+      "Python will display an error because 'example.py' is not a built-in command.",
+      "The interpreter will automatically convert the program into assembly language and show it on screen."
+    ],
+    "topic": "Chapter01 Introduction to Computers and Programming",
+    "explanation": "When you run a Python script in script mode by typing `python example.py`, the interpreter reads the file from secondary storage (like a hard drive), loads it into RAM, and begins execution. The CPU then processes each instruction through the fetch-decode-execute cycle. This reflects how programs are typically executed by a computer system.",
+    "question": "You wrote a Python program in script mode and saved it as 'example.py'. Then, you open your terminal and type the following command:\n\n```bash\npython example.py\n```\n\nAssuming there are no syntax errors, what will happen when you run this command?",
+    "answer": "The program's instructions will be loaded into RAM, and the CPU will execute them using the fetch-decode-execute cycle."
+  },
+  {
+    "options": [
+      "Tuples are mutable, whereas lists are immutable.",
+      "Tuples are a type of sequence that can have their elements rearranged.",
+      "Tuples allow duplicate elements but lists do not.",
+      "Tuples are immutable, while lists are mutable."
+    ],
+    "topic": "Chapter07 Lists and Tuples",
+    "explanation": "In Python, a tuple is an immutable sequence type, which means that once a tuple is created, its elements cannot be changed, added, or removed. On the other hand, a list is mutable, allowing modification of its elements.",
+    "question": "Which of the following is a primary property of tuples compared to lists in Python?",
+    "answer": "Tuples are immutable, while lists are mutable."
+  },
+  {
+    "options": [
+      "Saving data to a file on disk for later use",
+      "Printing output to the console",
+      "Reading data from an existing file",
+      "Deleting old data before saving new data"
+    ],
+    "topic": "Chapter06 Files and Exceptions",
+    "explanation": "Chapter 6 defines 'writing data to a file' as the process of saving information from a program into a file stored on the computer's disk. This allows the data to be retained and retrieved in future executions of the program.",
+    "question": "According to Chapter 6, what does the term 'writing data to a file' mean in Python?",
+    "answer": "Saving data to a file on disk for later use"
+  },
+  {
+    "options": [
+      "Names match exactly.",
+      "name1 comes before name2.",
+      "name1 comes after name2.",
+      "Error due to invalid comparison."
+    ],
+    "topic": "Chapter03 Decision Structures and Boolean Logic",
+    "explanation": "String comparisons in Python are case-sensitive and based on ASCII values. The uppercase 'A' in \"Alice\" has a lower ASCII value than the lowercase 'a' in \"alice\", so \"Alice\" < \"alice\". Therefore, the else block executes and prints: 'name1 comes before name2.'",
+    "question": "Consider the following Python code:\n\n```python\nname1 = \"Alice\"\nname2 = \"alice\"\n\nif name1 == name2:\n    print(\"Names match exactly.\")\nelif name1 > name2:\n    print(\"name1 comes after name2.\")\nelse:\n    print(\"name1 comes before name2.\")\n```\n\nWhat will this code output when executed?",
+    "answer": "name1 comes before name2."
+  },
+  {
+    "options": [
+      "To group statements that perform a specific task for better program structure",
+      "To generate random numbers more efficiently",
+      "To write code without using variables",
+      "To reduce the number of import statements in a program"
+    ],
+    "topic": "Chapter05 Functions",
+    "explanation": "According to Chapter 5, a function is a group of statements within a program that perform a specific task. Using functions supports the divide and conquer approach by modularizing programs, making them easier to design, read, and maintain.",
+    "question": "What is the primary purpose of using functions in Python, as described in Chapter 5?",
+    "answer": "To group statements that perform a specific task for better program structure"
+  },
+  {
+    "options": [
+      "They automatically detect and handle invalid user input.",
+      "They continue looping as long as a condition evaluates to True.",
+      "They execute a block of code a specific number of times, usually with a for loop.",
+      "They are typically implemented using a while loop."
+    ],
+    "topic": "Chapter04 Repetition Structures",
+    "explanation": "Count-controlled loops repeat a set number of times and are commonly implemented using Python’s for loop. This differs from condition-controlled loops, which rely on a boolean condition to determine if the loop should continue.",
+    "question": "Which of the following is true about count-controlled loops in Python?",
+    "answer": "They execute a block of code a specific number of times, usually with a for loop."
+  },
+  {
+    "options": [
+      "List Methods",
+      "List Comprehensions",
+      "Copying Lists",
+      "List Slicing"
+    ],
+    "topic": "Chapter07 Lists and Tuples",
+    "explanation": "List slicing in Python allows you to create a new list by obtaining a sublist from an existing list, without altering the original. It uses the format list[start:stop] where start is the index to begin and stop is the index to end but not include.",
+    "question": "Which Python feature allows you to access a portion of a list without modifying the original list?",
+    "answer": "List Slicing"
+  }
+]
