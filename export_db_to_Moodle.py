@@ -1,10 +1,9 @@
 """
 export_db_to_Moodle.py
 
-Exports quiz questions from a Firebase Firestore collection to a Moodle-compatible XML file.
-
-This version is cleaned of CLI logging. Instead, when used inside Streamlit,
-it will surface warnings and success messages in the sidebar.
+Exports quiz questions from a Firebase Firestore collection to a Moodle-compatible XML.
+Now includes a helper that returns the XML as a string (no file I/O) so you can
+offer a direct browser download in Streamlit.
 """
 
 from __future__ import annotations
@@ -28,7 +27,7 @@ def _xml_text(s: str) -> str:
     """Escape text for inclusion inside Moodle <text> elements."""
     if s is None:
         return ""
-    return escape(str(s), entities={'"': "&quot;", "'": "&apos;"})
+    return escape(str(s), entities={'\"': "&quot;", \"'\": "&apos;"})
 
 
 def _iter_questions(collection: str, limit: Optional[int]) -> Iterable[dict]:
@@ -100,28 +99,24 @@ def _question_to_xml(idx: int, q: dict, single: bool = True, shuffleanswers: boo
         lines.append("    </answer>")
 
     lines.append("  </question>")
-    return "\n".join(lines)
+    return "\\n".join(lines)
 
 
-def export_db_to_Moodle(
+def build_moodle_xml_from_firestore(
     credential_path: str,
-    output_path: str,
     collection: str = "quiz_questions",
     *,
     limit: Optional[int] = None,
     category: Optional[str] = None,
-    shuffleanswers: bool = True
-) -> int:
+    shuffleanswers: bool = True,
+) -> str:
     """
-    Export Firestore quiz questions to a Moodle XML file.
-
-    Returns:
-        The number of questions successfully written.
+    Build Moodle XML in-memory and return it as a string (no file I/O).
+    This is ideal for exposing a browser download button in Streamlit.
     """
     # Initialize Firebase
     initialize_firebase(credential_path)
 
-    # Build XML
     parts: List[str] = []
     parts.append('<?xml version="1.0" encoding="UTF-8"?>')
     parts.append("<quiz>")
@@ -140,26 +135,50 @@ def export_db_to_Moodle(
         if err:
             if st is not None:
                 st.sidebar.warning(f"Skipping invalid question {idx}: {err}")
-            # silently skip outside Streamlit
             continue
-
         parts.append(_question_to_xml(idx, q, single=True, shuffleanswers=shuffleanswers))
         written += 1
 
     parts.append("</quiz>")
+    xml = "\\n".join(parts)
+
+    if st is not None:
+        st.sidebar.success(f"Prepared {written} questions for download.")
+    return xml
+
+
+def export_db_to_Moodle(
+    credential_path: str,
+    output_path: str,
+    collection: str = "quiz_questions",
+    *,
+    limit: Optional[int] = None,
+    category: Optional[str] = None,
+    shuffleanswers: bool = True
+) -> int:
+    """
+    Export Firestore quiz questions to a Moodle XML file (on disk).
+
+    Returns:
+        The number of questions successfully written.
+    """
+    # Build XML in-memory first
+    xml = build_moodle_xml_from_firestore(
+        credential_path=credential_path,
+        collection=collection,
+        limit=limit,
+        category=category,
+        shuffleanswers=shuffleanswers,
+    )
 
     # Write the file
     with open(output_path, "w", encoding="utf-8") as f:
-        f.write("\n".join(parts))
+        f.write(xml)
 
-    # Success message in Streamlit sidebar (silent in CLI usage)
-    if st is not None:
-        st.sidebar.success(f"Exported {written} questions to {output_path}")
-
-    return written
+    return xml.count("<question type=\"multichoice\">")
 
 
-def _parse_args() -> argparse.Namespace:  # CLI remains supported, but silent
+def _parse_args() -> argparse.Namespace:  # CLI remains supported
     p = argparse.ArgumentParser(description="Export Firestore quiz questions to Moodle XML")
     p.add_argument("credential_path", help="Path to the Firebase service account JSON")
     p.add_argument("output_path", help="Destination Moodle XML file")
@@ -172,7 +191,7 @@ def _parse_args() -> argparse.Namespace:  # CLI remains supported, but silent
 
 if __name__ == "__main__":  # pragma: no cover
     args = _parse_args()
-    export_db_to_Moodle(
+    count = export_db_to_Moodle(
         credential_path=args.credential_path,
         output_path=args.output_path,
         collection=args.collection,
@@ -180,3 +199,5 @@ if __name__ == "__main__":  # pragma: no cover
         category=args.category,
         shuffleanswers=(not args.no_shuffle),
     )
+    if st is not None:
+        st.sidebar.success(f"Exported {count} questions to {args.output_path}")

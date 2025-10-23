@@ -1,12 +1,13 @@
+import json
 import os
 import tempfile
-import json
 
 import streamlit as st
 from dotenv import load_dotenv
 
 from chat_with_PDF import render_pdf_chat
 from create_context_from_PDF import load_topic_contexts
+from export_db_to_Moodle import export_db_to_Moodle, build_moodle_xml_from_firestore
 from export_quiz_to_PDF import generate_quiz_pdf
 # Use live Firebase backend
 from firebase_backend import (
@@ -14,22 +15,7 @@ from firebase_backend import (
     get_quiz_question_count, is_duplicate_question
 )
 from get_quiz import get_quiz_from_topic
-from export_db_to_Moodle import export_db_to_Moodle
 
-# --- Initialize Firebase ---
-initialize_firebase(_resolve_firebase_credentials_path())
-
-# --- Constants ---
-MAX_QUESTIONS = 10
-
-EXCLUDED_TERMS = [
-    "turtle graphics", "turtle", "turtle module",
-    "turtle.forward", "turtle.backward", "turtle.left", "turtle.right"
-]
-
-# --- Load Environment ---
-load_dotenv()
-api_key = os.getenv("OPENAI_API_KEY")
 
 # --- Export helpers ---
 def _resolve_firebase_credentials_path() -> str:
@@ -49,6 +35,22 @@ def _resolve_firebase_credentials_path() -> str:
         return tmp.name
 
     return "firebase_credentials.json"
+
+
+# --- Initialize Firebase ---
+initialize_firebase(_resolve_firebase_credentials_path())
+
+# --- Constants ---
+MAX_QUESTIONS = 10
+
+EXCLUDED_TERMS = [
+    "turtle graphics", "turtle", "turtle module",
+    "turtle.forward", "turtle.backward", "turtle.left", "turtle.right"
+]
+
+# --- Load Environment ---
+load_dotenv()
+api_key = os.getenv("OPENAI_API_KEY")
 
 
 # --- FUNCTION DEFINITIONS ---
@@ -90,7 +92,7 @@ def start_quiz(topic, save_to_db, topic_contexts, load_random=False):
 def display_question(topic, save_to_db, topic_contexts):
     """Displays the current question and options."""
     if not st.session_state.questions:
-        st.markdown("""
+        st.markdown(\"\"\"
         <div style='
             background-color: #eaf4fc;
             color: #31708f;
@@ -102,7 +104,7 @@ def display_question(topic, save_to_db, topic_contexts):
             <div style='font-size: 20px; font-weight: bold;'>🏆 Welcome to the Python Quiz!</div>
             <div style='font-size: 16px;'>🤔 Please start a new quiz or load existing questions from the sidebar.</div>
         </div>
-        """, unsafe_allow_html=True)
+        \"\"\", unsafe_allow_html=True)
         return
 
     i = st.session_state.current_question
@@ -115,7 +117,7 @@ def display_question(topic, save_to_db, topic_contexts):
     st.markdown(f"**QUESTION {i + 1}.**")
     if "```" in q["question"]:
         st.markdown(q["question"], unsafe_allow_html=True)
-    elif "\n" in q["question"] or "    " in q["question"]:
+    elif "\\n" in q["question"] or "    " in q["question"]:
         st.code(q["question"], language="python")
     else:
         st.markdown(q["question"])
@@ -156,7 +158,7 @@ def display_question(topic, save_to_db, topic_contexts):
         with st.expander("Explanation"):
             if "```" in q["explanation"]:
                 st.markdown(q["explanation"], unsafe_allow_html=True)
-            elif "\n" in q["explanation"] or "    " in q["explanation"] or "print(" in q["explanation"]:
+            elif "\\n" in q["explanation"] or "    " in q["explanation"] or "print(" in q["explanation"]:
                 st.code(q["explanation"], language="python")
             else:
                 st.write(q["explanation"])
@@ -220,13 +222,13 @@ def show_summary(topic, save_to_db, topic_contexts):
     st.success("You’ve reached the end of the quiz.")
     total = st.session_state.right_answers + st.session_state.wrong_answers
     score = (st.session_state.right_answers / total) * 100 if total > 0 else 0
-    st.markdown(f"""
+    st.markdown(f\"\"\"
     **📊 Your Stats:**
     - ✅ Correct Answers: {st.session_state.right_answers}
     - ❌ Incorrect Answers: {st.session_state.wrong_answers}
     - 🧠 Total Questions Answered: {total}
     - 🏁 Final Score: **{score:.1f}%**
-    """)
+    \"\"\")
 
     st.download_button(
         "⬇️ Download your quiz PDF",
@@ -327,22 +329,19 @@ if st.sidebar.button("🎲 Load 10 Random Questions (from Firebase)", disabled=q
     start_quiz(topic, save_to_db, load_topic_contexts(topics), load_random=True)
     st.rerun()
 
-# Export Moodle XML
-if st.sidebar.button("💾 Export Moodle XML"):
+# Export Moodle XML — download-only, no file written to disk
+if st.sidebar.button("💾 Prepare Moodle XML for Download"):
     cred_path = _resolve_firebase_credentials_path()
-    out_path = os.path.join(tempfile.gettempdir(), "moodle_questions.xml")
     try:
-        count = export_db_to_Moodle(
+        xml = build_moodle_xml_from_firestore(
             credential_path=cred_path,
-            output_path=out_path,
             collection="quiz_questions",
             category="Python Quiz",
             shuffleanswers=True
         )
-        with open(out_path, "rb") as f:
-            st.session_state.moodle_xml_bytes = f.read()
+        st.session_state.moodle_xml_bytes = xml.encode("utf-8")
         st.session_state.moodle_xml_filename = "moodle_questions.xml"
-        st.sidebar.success(f"Exported {count} questions. Use the download button below.")
+        st.sidebar.success("Moodle XML is ready. Use the download button below.")
     except Exception as e:
         st.sidebar.error(f"Export failed: {e}")
 
